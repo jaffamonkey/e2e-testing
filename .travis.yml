@@ -22,4 +22,4 @@ install:
   - sleep 5
   
 script:
-  - npm run nightwatch-cucumber-chrome
+  - npm run nightwatch-cucumber-firefox
