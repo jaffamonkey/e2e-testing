@@ -8,7 +8,8 @@ addons:
 before_script:
   - export DISPLAY=':99.0'
   - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+  - npm run selenium-install
+  - ./node_modules/.bin/selenium-standalone start &
   
 script:
-  - npm run selenium-install
   - npm run nightwatch-cucumber-chrome
