@@ -1,3 +1,6 @@
+language: node_js
+node_js:
+  - '7'
 addons:
   apt:
     packages:
@@ -8,4 +11,4 @@ before_script:
   
 script:
   - npm run selenium-install
-  - 
+  - nightwatch-cucumber-chrome
