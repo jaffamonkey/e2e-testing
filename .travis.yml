@@ -11,4 +11,4 @@ before_script:
   
 script:
   - npm run selenium-install
-  - nightwatch-cucumber-chrome
+  - npm run nightwatch-cucumber-chrome
