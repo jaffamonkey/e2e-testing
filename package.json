@@ -11,7 +11,7 @@
     "nightwatch-chrome-firefox": "node_modules/.bin/nightwatch -c ./nightwatch.conf.js -e chrome,firefox",
     "cucumber-chrome": "node_modules/.bin/cucumber-js -p chrome",
     "cucumber-firefox": "node_modules/.bin/cucumber-js -p firefox",
-    "nightwatch-cucumber-chrome": "node_modules/.bin/nightwatch -c ./nightwatch-cucumber.conf.js -e chrome",
+    "nightwatch-cucumber-chrome": "node_modules/.bin/nightwatch -c ./nightwatch-cucumber.conf.js -e chrome --headless --no-sandbox --disable-gpu",
     "nightwatch-cucumber-firefox": "node_modules/.bin/nightwatch -c ./nightwatch-cucumber.conf.js -e firefox",
     "nightwatch-cucumber-chrome-firefox": "node_modules/.bin/nightwatch -c ./nightwatch-cucumber.conf.js -e chrome,firefox"
   },
