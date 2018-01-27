@@ -22,4 +22,4 @@ install:
   - sleep 5
   
 script:
-  - yarn nightwatch-cucumber-chrome
+  - yarn nightwatch-cucumber-firefox
