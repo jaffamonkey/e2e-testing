@@ -1,8 +1,8 @@
 {
-  "src_folders": ["./nightwatch/tests"],
-  "output_folder": "./nightwatch/reports",
-  "custom_commands_path": "./nightwatch/commands",
-  "page_objects_path": "./nightwatch/page-objects",
+  "src_folders": ["./tests"],
+  "output_folder": "./reports",
+  "custom_commands_path": "./commands",
+  "page_objects_path": "./page-objects",
   "custom_assertions_path": "",
   "globals_path": "",
   "live_output": true,
@@ -31,7 +31,7 @@
         "enabled": true,
         "on_failure": true,
         "on_error": false,
-        "path": "./nightwatch/reports/screenshots"
+        "path": "./reports/screenshots"
       },
       "use_xpath": false,
       "skip_testcases_on_fail": false

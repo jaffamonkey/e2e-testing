@@ -5,19 +5,19 @@ const args = parseArgs(process.argv.slice(2));
 const conditionalArgs = [];
 
 if (args.coverage) {
-  conditionalArgs.push('--require', 'nightwatch-cucumber/coverage/hooks.js');
+  conditionalArgs.push('--require', 'coverage/hooks.js');
   conditionalArgs.push('--tags', '@smoke or @regression or @deep or @analytics');
 }
 
 require('nightwatch-cucumber')({
   cucumberArgs: [
     '--require', 'timeout.js',
-    '--require', 'nightwatch-cucumber/support/event-handlers.js',
-    '--require', 'nightwatch-cucumber/features/step-definitions',
+    '--require', 'support/event-handlers.js',
+    '--require', 'features/step-definitions',
     ...conditionalArgs,
     '--format', 'pretty',
-    '--format', 'json:nightwatch-cucumber/reports/cucumber.json',
-    'nightwatch-cucumber/features'
+    '--format', 'json:reports/cucumber.json',
+    'features'
   ]}
 );
 
@@ -27,8 +27,8 @@ module.exports = (function(settings) {
   //  "enabled": true,
   //  "workers": "auto"
   //};
-  settings.test_settings.default.screenshots.path = "./nightwatch-cucumber/reports/screenshots";
-  settings.output_folder =  "./nightwatch-cucumber/reports";
+  settings.test_settings.default.screenshots.path = "./reports/screenshots";
+  settings.output_folder =  "./reports";
   settings.src_folders = null;
   settings.custom_commands_path = null;
   settings.page_objects_path = null;

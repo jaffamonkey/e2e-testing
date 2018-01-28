@@ -6,8 +6,8 @@ defineSupportCode(({registerHandler}) => {
   registerHandler('AfterFeatures', () => {
     reporter.generate({
       theme: 'bootstrap',
-      jsonFile: path.join('nightwatch-cucumber', 'reports', 'cucumber.json'),
-      output:  path.join('nightwatch-cucumber', 'reports', 'nightwatch-cucumber-report.html'),
+      jsonFile: path.join('reports', 'cucumber.json'),
+      output:  path.join('reports', 'nightwatch-cucumber-report.html'),
       reportSuiteAsScenarios: true,
       launchReport: false
     });
