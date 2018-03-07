@@ -1,3 +1,4 @@
+@ci
 Feature: Checking login
 
 Scenario: Checking login

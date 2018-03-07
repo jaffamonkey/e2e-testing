@@ -1,5 +1,4 @@
 const parseArgs = require('minimist');
-
 const args = parseArgs(process.argv.slice(2));
 
 const conditionalArgs = [];
@@ -13,9 +12,9 @@ require('nightwatch-cucumber')({
   cucumberArgs: [
     '--require', 'timeout.js',
     '--require', 'features/support/event-handlers.js',
-    '--require', 'features/support/init.js',
+    '--require', 'features/support/init.js',    
+    '--require', 'page_objects/elements.js',
     '--require', 'features/step-definitions',
-    ...conditionalArgs,
     '--format', 'pretty',
     '--format', 'json:reports/cucumber.json',
     'features'
@@ -35,5 +34,6 @@ module.exports = (function(settings) {
   settings.page_objects_path = null;
 
   return settings;
-})(require('./nightwatch.json'));
+})
+(require('./nightwatch.json'));
 
