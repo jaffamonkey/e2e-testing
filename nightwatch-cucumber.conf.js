@@ -6,13 +6,14 @@ const conditionalArgs = [];
 
 if (args.coverage) {
   conditionalArgs.push('--require', 'coverage/hooks.js');
-  conditionalArgs.push('--tags', '@smoke or @regression or @deep or @analytics');
+  conditionalArgs.push('--tags', '@smoke or @regression or @api or @analytics');
 }
 
 require('nightwatch-cucumber')({
   cucumberArgs: [
     '--require', 'timeout.js',
-    '--require', 'support/event-handlers.js',
+    '--require', 'features/support/event-handlers.js',
+    '--require', 'features/support/init.js',
     '--require', 'features/step-definitions',
     ...conditionalArgs,
     '--format', 'pretty',
