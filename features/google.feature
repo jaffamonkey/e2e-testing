@@ -1,4 +1,4 @@
-@search
+@search @ci
 Feature: Google Search tagged
 
   @google

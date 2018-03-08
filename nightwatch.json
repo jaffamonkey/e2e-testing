@@ -2,7 +2,7 @@
   "src_folders": ["./tests"],
   "output_folder": "./reports",
   "custom_commands_path": "./commands",
-  "page_objects_path": "./page-objects",
+  "page_objects_path": "./pageobjects",
   "custom_assertions_path": "",
   "globals_path": "",
   "live_output": true,

@@ -13,4 +13,3 @@ defineSupportCode(({registerHandler}) => {
     });
   });
 });
-

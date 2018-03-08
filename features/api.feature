@@ -1,4 +1,4 @@
-@api
+@api @ci
 Feature: httpbin.org api test
 
 	Scenario: Setting headers in GET request
