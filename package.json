@@ -12,14 +12,14 @@
   },
   "dependencies": {
     "apickli": "2.0.0",
-    "chromedriver": "2.35.0",
-    "cucumber": "^2.1.0",
-    "cucumber-html-reporter": "0.4.2",
+    "chromedriver": "^2.35.0",
+    "cucumber": "4.0.0",
+    "cucumber-html-reporter": "4.0.2",
     "geckodriver": "^1.6.1",
     "minimist": "^1.2.0",
-    "nightwatch": "^0.9.15",
+    "nightwatch": "0.9.20",
     "nightwatch-cucumber": "^7.1.6",
     "selenium-standalone": "^6.4.1",
-    "selenium-webdriver": "3.4.0"
+    "selenium-server": "3.7.1"
   }
 }

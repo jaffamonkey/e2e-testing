@@ -1,8 +1,7 @@
-const {client} = require('nightwatch-cucumber');
-const {defineSupportCode} = require('cucumber');
-const elementStore = require('../../page_objects/elements')
+const { client } = require('nightwatch-cucumber')
+const { Given, Then, When } = require('cucumber')
 
-defineSupportCode(({Given, Then}) => {
+
   Given(/^I open Google's search page$/, () => {
     return client
       .url('http://google.com')
@@ -20,7 +19,7 @@ defineSupportCode(({Given, Then}) => {
   });
 
   Then(/^the Google search form exists$/, () => {
-    return client.assert.visible(elementStore.elements.googleSearchField);
+    return client.assert.visible('@googleSearchField');
   });
 
   Then(/^the Tikkie about page exists$/, () => {
@@ -52,4 +51,3 @@ defineSupportCode(({Given, Then}) => {
         .assert.containsText('#flash','You logged out of the secure area!')
         .end();
   });
-});

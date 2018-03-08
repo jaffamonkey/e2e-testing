@@ -12,7 +12,7 @@ if (args.coverage) {
 require('nightwatch-cucumber')({
   cucumberArgs: [
     '--require', 'timeout.js',
-    '--require', 'features/support/event-handlers.js',
+    '--require', 'features/support/hooks.js',
     '--require', 'features/support/init.js',
     '--require', 'features/step-definitions',
     ...conditionalArgs,

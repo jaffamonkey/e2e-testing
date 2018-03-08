@@ -1,39 +1,54 @@
-const parseArgs = require('minimist');
-const args = parseArgs(process.argv.slice(2));
-
-const conditionalArgs = [];
-
-if (args.coverage) {
-  conditionalArgs.push('--require', 'coverage/hooks.js');
-  conditionalArgs.push('--tags', '@smoke or @regression or @api or @analytics');
-}
+const seleniumServer = require('selenium-server')
+const phantomjs = require('phantomjs-prebuilt')
+const chromedriver = require('chromedriver')
 
 require('nightwatch-cucumber')({
-  cucumberArgs: [
-    '--require', 'timeout.js',
-    '--require', 'features/support/event-handlers.js',
-    '--require', 'features/support/init.js',    
-    '--require', 'page_objects/elements.js',
-    '--require', 'features/step-definitions',
-    '--format', 'pretty',
-    '--format', 'json:reports/cucumber.json',
-    'features'
-  ]}
-);
-
-module.exports = (function(settings) {
-  //settings.selenium.start_process = false;
-  //settings.test_workers = {
-  //  "enabled": true,
-  //  "workers": "auto"
-  //};
-  settings.test_settings.default.screenshots.path = "./reports/screenshots";
-  settings.output_folder =  "./reports";
-  settings.src_folders = null;
-  settings.custom_commands_path = null;
-  settings.page_objects_path = null;
-
-  return settings;
+    cucumberArgs: ['--require', 'features/step_definitions', '--format', 'json:reports/cucumber.json', 'features']
 })
-(require('./nightwatch.json'));
 
+module.exports = {
+    output_folder: 'reports',
+    custom_assertions_path: '',
+    page_objects_path: 'page_objects',
+    live_output: false,
+    disable_colors: false,
+    selenium: {
+        start_process: true,
+        server_path: seleniumServer.path,
+        log_path: '',
+        host: '127.0.0.1',
+        port: 4444
+    },
+    test_settings: {
+        default: {
+            launch_url: 'http://localhost:8087',
+            selenium_port: 4444,
+            selenium_host: '127.0.0.1',
+            desiredCapabilities: {
+                browserName: 'phantomjs',
+                javascriptEnabled: true,
+                acceptSslCerts: true,
+                'phantomjs.binary.path': phantomjs.path
+            }
+        },
+        chrome: {
+            desiredCapabilities: {
+                browserName: 'chrome',
+                javascriptEnabled: true,
+                acceptSslCerts: true
+            },
+            selenium: {
+                cli_args: {
+                    'webdriver.chrome.driver': chromedriver.path
+                }
+            }
+        },
+        firefox: {
+            desiredCapabilities: {
+                browserName: 'firefox',
+                javascriptEnabled: true,
+                acceptSslCerts: true
+            }
+        }
+    }
+}
