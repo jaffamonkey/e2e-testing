@@ -8,12 +8,6 @@ const { Given, Then, When } = require('cucumber')
       .waitForElementVisible('body', 1000);
   });
 
-  Given(/^I open Tikkie homepage$/, () => {
-    return client
-        .url('https://dev.tikkie.me/')
-        .waitForElementVisible('body', 1000);
-  });
-
   Then(/^the title is "([^"]*)"$/, (title) => {
     return client.assert.title(title);
   });
@@ -21,10 +15,6 @@ const { Given, Then, When } = require('cucumber')
   Then(/^the Google search form exists$/, () => {
       const google = client.page.google();
     return google.assert.visible('@googleSearchField');
-  });
-
-  Then(/^the Tikkie about page exists$/, () => {
-    return client.assert.containsText('h1','Over Tikkie');
   });
 
   Then(/^I click on the link "([^"]*)"$/, (linkClass) => {
