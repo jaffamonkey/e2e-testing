@@ -19,7 +19,8 @@ const { Given, Then, When } = require('cucumber')
   });
 
   Then(/^the Google search form exists$/, () => {
-    return client.assert.visible('@googleSearchField');
+      const google = client.page.google();
+    return google.assert.visible('@googleSearchField');
   });
 
   Then(/^the Tikkie about page exists$/, () => {

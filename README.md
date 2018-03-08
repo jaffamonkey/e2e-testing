@@ -27,3 +27,17 @@ $ npm run nightwatch-cucumber-chrome
 $ npm run nightwatch-cucumber-firefox
 $ npm run nightwatch-cucumber-chrome-firefox
 ```
+
+To run tests in parallel:
+
+```
+$ npm run nightwatch-cucumber-parallel
+```
+
+### Step 4
+
+Generate HTML report (with screenshots)
+
+```
+$ npm run generate-report
+```

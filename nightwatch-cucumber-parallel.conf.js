@@ -1,39 +1,47 @@
-const parseArgs = require('minimist');
-
-const args = parseArgs(process.argv.slice(2));
-
-const conditionalArgs = [];
-
-if (args.coverage) {
-  conditionalArgs.push('--require', 'coverage/hooks.js');
-  conditionalArgs.push('--tags', '@smoke or @regression or @api or @analytics');
-}
+const seleniumServer = require('selenium-server')
+const chromedriver = require('chromedriver')
 
 require('nightwatch-cucumber')({
-  cucumberArgs: [
-    '--require', 'timeout.js',
-    '--require', 'features/support/hooks.js',
-    '--require', 'features/support/init.js',
-    '--require', 'features/step-definitions',
-    ...conditionalArgs,
-    '--format', 'pretty',
-    '--format', 'json:reports/cucumber.json',
-    'features'
-  ]}
-);
+    cucumberArgs: ['--require', 'features/step-definitions', '--require', 'features/support', '--require', 'page_objects', '--format', 'json:reports/cucumber.json', 'features']
+})
 
-module.exports = (function(settings) {
-  //settings.selenium.start_process = false;
-  //settings.test_workers = {
-  //  "enabled": true,
-  //  "workers": "auto"
-  //};
-  settings.test_settings.default.screenshots.path = "./reports/screenshots";
-  settings.output_folder =  "./reports";
-  settings.src_folders = null;
-  settings.custom_commands_path = null;
-  settings.page_objects_path = null;
-
-  return settings;
-})(require('./nightwatch-parallel.json'));
-
+module.exports = {
+    output_folder: 'reports',
+    custom_assertions_path: '',
+    page_objects_path: 'page_objects',
+    live_output: false,
+    disable_colors: false,
+    test_workers: {
+        enabled: true,
+        workers: 'auto'
+    },
+    selenium: {
+        start_process: true,
+        server_path: seleniumServer.path,
+        log_path: '',
+        host: '127.0.0.1',
+        port: 4444
+    },
+    test_settings: {
+        default: {
+            launch_url: 'http://dev.tikkie.me',
+            selenium_port: 4444,
+            selenium_host: '127.0.0.1',
+            screenshots : {
+                enabled : true,
+                on_failure : true,
+                path: 'reports/screenshots'
+            },
+            desiredCapabilities: {
+                browserName: 'chrome',
+                javascriptEnabled: true,
+                acceptSslCerts: true
+            },
+            selenium: {
+                cli_args: {
+                    'webdriver.chrome.driver': chromedriver.path
+                }
+            }
+        }
+    }
+}

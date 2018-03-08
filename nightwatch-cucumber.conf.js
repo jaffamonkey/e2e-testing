@@ -1,9 +1,8 @@
 const seleniumServer = require('selenium-server')
-const phantomjs = require('phantomjs-prebuilt')
 const chromedriver = require('chromedriver')
 
 require('nightwatch-cucumber')({
-    cucumberArgs: ['--require', 'features/step_definitions', '--format', 'json:reports/cucumber.json', 'features']
+    cucumberArgs: ['--require', 'features/step-definitions', '--require', 'features/support', '--require', 'page_objects', '--format', 'json:reports/cucumber.json', 'features']
 })
 
 module.exports = {
@@ -21,17 +20,14 @@ module.exports = {
     },
     test_settings: {
         default: {
-            launch_url: 'http://localhost:8087',
+            launch_url: 'http://dev.tikkie.me',
             selenium_port: 4444,
             selenium_host: '127.0.0.1',
-            desiredCapabilities: {
-                browserName: 'phantomjs',
-                javascriptEnabled: true,
-                acceptSslCerts: true,
-                'phantomjs.binary.path': phantomjs.path
-            }
-        },
-        chrome: {
+            screenshots : {
+                enabled : true,
+                on_failure : true,
+                path: 'reports/screenshots'
+            },
             desiredCapabilities: {
                 browserName: 'chrome',
                 javascriptEnabled: true,
