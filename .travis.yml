@@ -17,9 +17,9 @@ before_script:
   - sleep 3
   
 install:
-  - yarn
-  - yarn selenium-install
+  - npm install
+  - npm run selenium-install
   - sleep 5
   
 script:
-  - yarn nightwatch-cucumber-firefox
+  - npm run nightwatch-cucumber-firefox
