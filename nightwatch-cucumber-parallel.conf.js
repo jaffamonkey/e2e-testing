@@ -11,6 +11,10 @@ module.exports = {
     page_objects_path: 'page_objects',
     live_output: false,
     disable_colors: false,
+    test_workers: {
+        enabled: true,
+        workers: 'auto'
+    },
     selenium: {
         start_process: true,
         server_path: seleniumServer.path,
@@ -37,13 +41,6 @@ module.exports = {
                 cli_args: {
                     'webdriver.chrome.driver': chromedriver.path
                 }
-            }
-        },
-        firefox: {
-            desiredCapabilities: {
-                browserName: 'firefox',
-                javascriptEnabled: true,
-                acceptSslCerts: true
             }
         }
     }
