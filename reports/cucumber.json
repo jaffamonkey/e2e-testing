@@ -51,7 +51,8 @@
               "location": "features/support/hooks.js:6"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -63,7 +64,8 @@
               "location": "node_modules/apickli/apickli-gherkin.js:40"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -76,7 +78,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 444000000
+              "duration": 346000000
             }
           },
           {
@@ -149,11 +151,11 @@
             "line": 6,
             "name": "I open Google's search page",
             "match": {
-              "location": "features/step-definitions/steps.js:4"
+              "location": "features/step-definitions/steps.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 7442000000
+              "duration": 2892000000
             }
           },
           {
@@ -162,7 +164,7 @@
             "line": 7,
             "name": "the title is \"Google\"",
             "match": {
-              "location": "features/step-definitions/steps.js:10"
+              "location": "features/step-definitions/steps.js:11"
             },
             "result": {
               "status": "passed",
@@ -175,11 +177,11 @@
             "line": 8,
             "name": "the Google search form exists",
             "match": {
-              "location": "features/step-definitions/steps.js:14"
+              "location": "features/step-definitions/steps.js:15"
             },
             "result": {
               "status": "passed",
-              "duration": 37000000
+              "duration": 36000000
             }
           }
         ]
@@ -236,11 +238,11 @@
             "line": 5,
             "name": "I am logged in as valid user",
             "match": {
-              "location": "features/step-definitions/steps.js:41"
+              "location": "features/step-definitions/steps.js:39"
             },
             "result": {
               "status": "passed",
-              "duration": 6432000000
+              "duration": 8763000000
             }
           },
           {
@@ -249,11 +251,11 @@
             "line": 6,
             "name": "I log out of website",
             "match": {
-              "location": "features/step-definitions/steps.js:26"
+              "location": "features/step-definitions/steps.js:25"
             },
             "result": {
               "status": "passed",
-              "duration": 613000000
+              "duration": 541000000
             }
           }
         ]

@@ -1,5 +1,6 @@
 const { client } = require('nightwatch-cucumber')
 const { Given, Then, When } = require('cucumber')
+const shared = client.page.shared();
 
   Given(/^I open Google's search page$/, () => {
     return client
@@ -12,19 +13,16 @@ const { Given, Then, When } = require('cucumber')
   });
 
   Then(/^the Google search form exists$/, () => {
-    const shared = client.page.shared();
     return shared.assert.visible('@googleSearchField');
   });
 
   Then(/^I click on the logout button$/, () => {
-    const shared = client.page.shared();
     return shared
         .click('@logOut')
         .assert.containsText('#flash','You logged out of the secure area!')
   });
 
   Then(/^I log out of website$/, () => {
-    const shared = client.page.shared();
     return shared
         .clickLinkByText('Log out')
         .assert.containsText('#flash','You logged out of the secure area!')
