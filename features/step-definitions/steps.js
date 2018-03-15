@@ -1,7 +1,6 @@
 const { client } = require('nightwatch-cucumber')
 const { Given, Then, When } = require('cucumber')
 
-
   Given(/^I open Google's search page$/, () => {
     return client
       .url('http://google.com')
@@ -13,8 +12,22 @@ const { Given, Then, When } = require('cucumber')
   });
 
   Then(/^the Google search form exists$/, () => {
-      const google = client.page.google();
-    return google.assert.visible('@googleSearchField');
+    const shared = client.page.shared();
+    return shared.assert.visible('@googleSearchField');
+  });
+
+  Then(/^I click on the logout button$/, () => {
+    const shared = client.page.shared();
+    return shared
+        .click('@logOut')
+        .assert.containsText('#flash','You logged out of the secure area!')
+  });
+
+  Then(/^I log out of website$/, () => {
+    const shared = client.page.shared();
+    return shared
+        .clickLinkByText('Log out')
+        .assert.containsText('#flash','You logged out of the secure area!')
   });
 
   Then(/^I click on the link "([^"]*)"$/, (linkClass) => {
@@ -38,7 +51,4 @@ const { Given, Then, When } = require('cucumber')
         .click(".radius")
         .assert.containsText('#flash','You logged into a secure area!')
         .assert.containsText('h4.subheader','Welcome to the Secure Area. When you are done click logout below.')
-        .click("i.icon-2x.icon-signout")
-        .assert.containsText('#flash','You logged out of the secure area!')
-        .end();
   });

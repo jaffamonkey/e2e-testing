@@ -2,7 +2,7 @@ const seleniumServer = require('selenium-server')
 const chromedriver = require('chromedriver')
 
 require('nightwatch-cucumber')({
-    cucumberArgs: ['--require', 'features/step-definitions', '--require', 'features/support', '--require', 'page_objects', '--format', 'json:reports/cucumber.json', 'features']
+    cucumberArgs: ['--require', 'features/step-definitions', '--require', 'features/support', '--require', 'page_objects', '--format', 'node_modules/cucumber-pretty', '--format', 'json:reports/cucumber.json', 'features']
 })
 
 module.exports = {
