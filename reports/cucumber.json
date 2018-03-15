@@ -78,7 +78,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 346000000
+              "duration": 2229000000
             }
           },
           {
@@ -90,7 +90,8 @@
               "location": "node_modules/apickli/apickli-gherkin.js:161"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]
@@ -142,7 +143,8 @@
               "location": "node_modules/apickli/apickli-gherkin.js:30"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -155,7 +157,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2892000000
+              "duration": 27215000000
             }
           },
           {
@@ -168,7 +170,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 8000000
+              "duration": 9000000
             }
           },
           {
@@ -181,7 +183,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 36000000
+              "duration": 41000000
             }
           }
         ]
@@ -242,7 +244,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 8763000000
+              "duration": 35989000000
             }
           },
           {
@@ -255,7 +257,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 541000000
+              "duration": 590000000
             }
           }
         ]

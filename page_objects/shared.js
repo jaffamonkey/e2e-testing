@@ -11,6 +11,13 @@ module.exports = {
            return this
             .waitForElementVisible('@'+linkText, 1000)
             .click('@'+linkText);
-          }
+        },
+        putTextFromSelectorToAnotherSelector: function(selector1, input1){ 
+            var text;
+            browser.getValue(selector1, function (result) {
+                text = result.value;
+                browser.setValue(input1, text);
+          });
+        }   
       }]
 }
