@@ -17,6 +17,8 @@ const shared = client.page.shared();
   });
 
   Then(/^I click on the logout button$/, () => {
+    // Debug breakpoint
+    // debugger;
     return shared
         .click('@Logout')
         .assert.containsText('#flash','You logged out of the secure area!')

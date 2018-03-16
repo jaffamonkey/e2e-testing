@@ -4,6 +4,7 @@
   "description": "End-to-End Testing with Nightwatch and Cucumber",
   "devDependencies": {},
   "scripts": {
+    "e2e-debug": "node --inspect node_modules/nightwatch/bin/nightwatch",
     "selenium-install": "node_modules/.bin/selenium-standalone install",
     "selenium": "node_modules/.bin/selenium-standalone start",
     "nightwatch-cucumber-chrome": "node_modules/.bin/nightwatch -c ./nightwatch-cucumber.conf.js",
