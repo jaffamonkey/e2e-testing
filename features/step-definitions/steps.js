@@ -30,8 +30,9 @@ const shared = client.page.shared();
         .assert.containsText('#flash','You logged out of the secure area!')
   });
 
-  Then(/^I click on the link "([^"]*)"$/, (linkClass) => {
-    return client.click(linkClass)
+  Then(/^I click the link text "([^"]*)"$/, (linkText) => {
+    return shared
+        .clickLinkByPureText(linkText)
   });
 
   Then(/^I click on the link "([^"]*)" containing text "([^"]*)"$/, (linkClass, linkText) => {

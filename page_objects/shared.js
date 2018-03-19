@@ -12,6 +12,9 @@ module.exports = {
             .waitForElementVisible('@'+linkText, 1000)
             .click('@'+linkText);
         },
+        clickLinkByPureText: function(linkText){      
+            return this.click('link text', linkText);
+        },
         putTextFromSelectorToAnotherSelector: function(selector1, input1){ 
             var text;
             browser.getValue(selector1, function (result) {

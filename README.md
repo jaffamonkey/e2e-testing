@@ -41,3 +41,4 @@ Generate HTML report (with screenshots)
 ```
 $ npm run generate-report
 ```
+

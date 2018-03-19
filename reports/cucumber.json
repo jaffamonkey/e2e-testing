@@ -64,8 +64,7 @@
               "location": "node_modules/apickli/apickli-gherkin.js:40"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -78,7 +77,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2229000000
+              "duration": 1243000000
             }
           },
           {
@@ -143,8 +142,7 @@
               "location": "node_modules/apickli/apickli-gherkin.js:30"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -157,7 +155,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 27215000000
+              "duration": 5686000000
             }
           },
           {
@@ -183,7 +181,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 41000000
+              "duration": 36000000
             }
           }
         ]
@@ -231,7 +229,8 @@
               "location": "node_modules/apickli/apickli-gherkin.js:30"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -240,11 +239,11 @@
             "line": 5,
             "name": "I am logged in as valid user",
             "match": {
-              "location": "features/step-definitions/steps.js:39"
+              "location": "features/step-definitions/steps.js:41"
             },
             "result": {
               "status": "passed",
-              "duration": 35989000000
+              "duration": 5292000000
             }
           },
           {
@@ -253,11 +252,11 @@
             "line": 6,
             "name": "I log out of website",
             "match": {
-              "location": "features/step-definitions/steps.js:25"
+              "location": "features/step-definitions/steps.js:27"
             },
             "result": {
               "status": "passed",
-              "duration": 590000000
+              "duration": 468000000
             }
           }
         ]
