@@ -19,7 +19,7 @@ before_script:
 install:
   - npm install
   - npm run selenium-install
-  - sleep 5
+  - sleep 10
   
 script:
   - npm run nightwatch-cucumber-firefox
