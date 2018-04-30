@@ -21,7 +21,7 @@
     "cucumber": "4.2.1",
     "cucumber-html-reporter": "4.0.2",
     "cucumber-pretty": "1.4.1",
-    "electron-prebuilt": "1.4.13",
+    "electron": "1.8.6",
     "faker": "4.1.0",
     "geckodriver": "1.11.0",
     "minimist": "1.2.0",
