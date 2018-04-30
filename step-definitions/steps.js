@@ -27,6 +27,7 @@ const shared = client.page.shared();
   Then(/^I log out of website$/, () => {
     return shared
         .clickLinkByText('Log out')
+        .waitForElementVisible('i.fa-sign-in', 3000)
         .assert.containsText('#flash','You logged out of the secure area!')
   });
 
@@ -46,10 +47,12 @@ const shared = client.page.shared();
         .setValue('#username', 'tomsmith')
         .setValue('#password', 'SuperSecretPassword')
         .click('.radius')
+        .waitForElementVisible('#flash', 3000)
         .assert.containsText('#flash','Your password is invalid!')
         .setValue('#username', 'tomsmith')
         .setValue('#password', 'SuperSecretPassword!')
         .click(".radius")
+        .waitForElementVisible('div.success', 3000)
         .assert.containsText('#flash','You logged into a secure area!')
         .assert.containsText('h4.subheader','Welcome to the Secure Area. When you are done click logout below.')
   });

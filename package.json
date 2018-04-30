@@ -7,23 +7,27 @@
     "e2e-debug": "node --inspect node_modules/nightwatch/bin/nightwatch",
     "selenium-install": "node_modules/.bin/selenium-standalone install",
     "selenium": "node_modules/.bin/selenium-standalone start",
-    "nightwatch-cucumber-chrome": "node_modules/.bin/nightwatch -c ./nightwatch-cucumber.conf.js",
+    "nightwatch-cucumber-chrome": "node_modules/.bin/nightwatch -c ./nightwatch-cucumber.conf.js -e default",
+    "nightwatch-cucumber-travis": "node_modules/.bin/nightwatch -c ./nightwatch-cucumber-travis.conf.js",
     "nightwatch-cucumber-parallel": "node_modules/.bin/nightwatch -c ./nightwatch-cucumber-parallel.conf.js",
     "nightwatch-cucumber-firefox": "node_modules/.bin/nightwatch -c ./nightwatch-cucumber.conf.js -e firefox",
+    "nightwatch-cucumber-ios": "node_modules/.bin/nightwatch -c ./nightwatch-cucumber-ios.conf.js -e default",
     "nightwatch-cucumber-chrome-firefox": "node_modules/.bin/nightwatch -c ./nightwatch-cucumber.conf.js -e chrome,firefox",
     "generate-report": "node generate-report.js"
   },
   "dependencies": {
-    "apickli": "2.0.0",
-    "chromedriver": "^2.35.0",
-    "cucumber": "4.0.0",
+    "apickli": "latest",
+    "chromedriver": "2.37.0",
+    "cucumber": "4.2.1",
     "cucumber-html-reporter": "4.0.2",
-    "cucumber-pretty": "^1.4.0",
-    "geckodriver": "^1.6.1",
-    "minimist": "^1.2.0",
-    "nightwatch": "latest",
-    "nightwatch-cucumber": "latest",
+    "cucumber-pretty": "1.4.1",
+    "electron-prebuilt": "1.4.13",
+    "faker": "4.1.0",
+    "geckodriver": "1.11.0",
+    "minimist": "1.2.0",
+    "nightwatch": "0.9.20",
+    "nightwatch-cucumber": "9.1.2",
     "selenium-server": "3.7.1",
-    "selenium-standalone": "^6.4.1"
+    "selenium-standalone": "6.13.0"
   }
 }

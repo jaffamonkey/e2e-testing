@@ -1,11 +1,12 @@
 const seleniumServer = require('selenium-server')
 const chromedriver = require('chromedriver')
-const electron = require('electron-prebuilt');
 
 require('nightwatch-cucumber')({
     cucumberArgs: [
             '--require', 'step-definitions', 
             '--require', 'support', 
+            '--require', 'page_objects', 
+            '-- --tag', 'ci',
             '--format', 'node_modules/cucumber-pretty', 
             '--format', 'json:reports/cucumber.json', 
             'features'
@@ -15,47 +16,43 @@ require('nightwatch-cucumber')({
 module.exports = {
     output_folder: 'reports',
     custom_assertions_path: 'step-definitions/assertions',
-    globals_path : 'step-definitions/globals/globalModules.js',
     page_objects_path: 'step-definitions/page_objects',
+    globals_path : 'step-definitions/globals/globalModules.js',
     live_output: false,
     disable_colors: false,
     selenium: {
-        start_process: true,
+        start_process: false,
         server_path: seleniumServer.path,
         log_path: '',
         host: '127.0.0.1',
         port: 4444
     },
+    appium: {
+        start_process: true
+    },
     test_settings: {
         default: {
             launch_url: 'http://google.com',
-            selenium_port: 4444,
+            selenium_port: 4723,
             selenium_host: '127.0.0.1',
+            silent: true,
+            desiredCapabilities : {
+              browserName : 'Safari',
+              platformName : 'iOS',
+              platformVersion : '11.2',
+              deviceName : 'iPad Air 2',
+            //   noReset: true
+              // "app": APP_PATH + "ios/PieDrive.app", // path for the ios app you want to test
+            },
             screenshots : {
                 enabled : true,
                 on_failure : true,
                 path: './reports/screenshots'
             },
-            desiredCapabilities: {
-                browserName: 'chrome',
-                chromeOptions : {
-                //  binary: electron,
-                    args: ['--headless', '--window-size=1280,1280'],
-                  },
-                javascriptEnabled: true,
-                acceptSslCerts: true
-            },
             selenium: {
                 cli_args: {
                     'webdriver.chrome.driver': chromedriver.path
                 }
-            }
-        },
-        firefox: {
-            desiredCapabilities: {
-                browserName: 'firefox',
-                javascriptEnabled: true,
-                acceptSslCerts: true
             }
         },
     }

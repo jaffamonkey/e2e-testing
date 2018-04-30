@@ -1,4 +1,4 @@
-@ci @login
+@ci @login @iostest
 Feature: Checking login
 
 Scenario: Checking login
