@@ -2,14 +2,6 @@ sudo: required
 os: osx
 language: node_js
 node_js: '7'
-
-addons:
-  firefox: latest
-  apt:
-    sources:
-     - google-chrome
-    packages:
-     - google-chrome-stable
      
 include:
     - osx_image: xcode9.2
@@ -19,6 +11,5 @@ script:
   - npm install -g appium
   - appium &
   - npm install
-  - npm run selenium-install
   - npm run nightwatch-cucumber-travis-ios
  
