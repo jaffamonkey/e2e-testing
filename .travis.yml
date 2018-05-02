@@ -19,7 +19,7 @@ before_script:
 script:
   - npm install -g appium
   - appium &
+  - sleep 10
   - npm install
-  - npm run selenium-install
   - npm run nightwatch-cucumber-travis-ios -- --tag iostest
  
