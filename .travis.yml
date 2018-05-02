@@ -17,7 +17,6 @@ script:
   - npm install -g iproxy
   - npm install -g appium
   - appium &
-  - npm install
-  - npm run selenium-install
+  - sleep 10
   - npm run nightwatch-cucumber-travis-ios
  
