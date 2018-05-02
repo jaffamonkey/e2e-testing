@@ -1,8 +1,8 @@
+sudo: required
+os: osx
 language: node_js
+node_js: '7'
 
-node_js:
-  - '7'
-  
 addons:
   firefox: latest
   apt:
@@ -10,16 +10,14 @@ addons:
      - google-chrome
     packages:
      - google-chrome-stable
+     
+include:
+    - osx_image: xcode9.2
+      env: DEVICE=11.2
 
-before_script:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-  - sleep 3
-  
-install:
+script:
+  - npm install -g appium
   - npm install
   - npm run selenium-install
-  - sleep 10
-  
-script:
-  - npm run nightwatch-cucumber-travis
+  - npm run nightwatch-cucumber-travis-ios
+ 
