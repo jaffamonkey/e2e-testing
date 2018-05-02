@@ -17,6 +17,7 @@ include:
 
 script:
   - npm install -g appium
+  - appium &
   - npm install
   - npm run selenium-install
   - npm run nightwatch-cucumber-travis-ios
