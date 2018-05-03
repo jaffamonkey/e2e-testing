@@ -3,11 +3,6 @@ os: osx
 language: node_js
 node_js: '7'
      
-addons:
-  apt:
-    packages:
-     - xvfb
-     
 include:
     - osx_image: xcode9.2
       env: DEVICE=11.2
