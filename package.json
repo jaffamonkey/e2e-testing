@@ -7,6 +7,7 @@
     "e2e-debug": "node --inspect node_modules/nightwatch/bin/nightwatch",
     "nightwatch-cucumber-travis-ios": "node_modules/.bin/nightwatch -c ./nightwatch-cucumber-travis-ios.conf.js -e default",
     "nightwatch-cucumber-ios": "node_modules/.bin/nightwatch -c ./nightwatch-cucumber-ios.conf.js -e default",
+    "travis-ios": "node_modules/.bin/nightwatch -c ./nightwatch-ios.conf.js -e default",
     "generate-report": "node generate-report.js"
   },
   "dependencies": {
