@@ -14,6 +14,7 @@ before_script:
 script:
   - npm install -g appium
   - appium &
+  - ./node_modules/selenium-server/lib/runner/selenium-server-standalone-3.7.1.jar &
   - sleep 10
   - npm install
   - npm run nightwatch-cucumber-travis-ios -- --tag iostest
