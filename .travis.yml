@@ -16,5 +16,5 @@ script:
   - appium &
   - sleep 10
   - npm install
-  - npm run travis-ios --tag iostest
+  - npm run travis-ios -- --tag iostest
 
