@@ -8,6 +8,8 @@ include:
       env: DEVICE=11.2
 
 before_script:
+  - brew update
+  - brew cask install java
   - "sudo Xvfb :99 -ac -screen 0 1024x768x8 &"
   - sleep 3
   
