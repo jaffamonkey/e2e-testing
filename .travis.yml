@@ -8,7 +8,7 @@ include:
       env: DEVICE=11.2
 
 before_script:
-  - sudo Xvfb :99 -ac -screen 0 1024x768x8; echo ok )& ; fi
+  - ( sudo Xvfb :99 -ac -screen 0 1024x768x8; echo ok )&
 #   - "export DISPLAY=:99.0"
 #   - "sh -e /etc/init.d/xvfb start"
   - sleep 3
