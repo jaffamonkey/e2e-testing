@@ -20,28 +20,28 @@ module.exports = {
     globals_path : 'step-definitions/globals/globalModules.js',
     live_output: false,
     disable_colors: false,
-//     selenium: {
-//         start_process: false,
-//         // server_path: seleniumServer.path,
-//         log_path: '',
-//         host: '127.0.0.1',
-//         port: 4444
-//     },
+    selenium: {
+        start_process: false,
+        server_path: seleniumServer.path,
+        log_path: '',
+        host: '127.0.0.1',
+        port: 4723
+    },
     appium: {
-        start_process: false
+        start_process: true
     },
     test_settings: {
         default: {
             launch_url: 'http://google.com',
-            // selenium_port: 4723,
-            // selenium_host: '127.0.0.1',
+            selenium_port: 4723,
+            selenium_host: '127.0.0.1',
             silent: true,
             desiredCapabilities : {
               browserName : 'Safari',
               platformName : 'iOS',
               platformVersion : '10.3',
               deviceName : 'iPad Air 2',
-            //   noReset: true
+              noReset: true
               // "app": APP_PATH + "ios/PieDrive.app", // path for the ios app you want to test
             },
             screenshots : {
@@ -49,11 +49,11 @@ module.exports = {
                 on_failure : true,
                 path: './reports/screenshots'
             },
-            selenium: {
-                cli_args: {
-                    'webdriver.chrome.driver': chromedriver.path
-                }
-            }
+//             selenium: {
+//                 cli_args: {
+//                     'webdriver.chrome.driver': chromedriver.path
+//                 }
+//             }
         },
     }
 }
