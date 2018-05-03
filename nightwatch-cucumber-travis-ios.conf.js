@@ -25,7 +25,7 @@ module.exports = {
         server_path: seleniumServer.path,
         log_path: '',
         host: '127.0.0.1',
-        port: 4723
+        port: 4444
     },
     appium: {
         start_process: true
@@ -39,9 +39,9 @@ module.exports = {
             desiredCapabilities : {
               browserName : 'Safari',
               platformName : 'iOS',
-              platformVersion : '10.3',
+              platformVersion : '11.2',
               deviceName : 'iPad Air 2',
-              noReset: true
+            //   noReset: true
               // "app": APP_PATH + "ios/PieDrive.app", // path for the ios app you want to test
             },
             screenshots : {
@@ -49,11 +49,11 @@ module.exports = {
                 on_failure : true,
                 path: './reports/screenshots'
             },
-//             selenium: {
-//                 cli_args: {
-//                     'webdriver.chrome.driver': chromedriver.path
-//                 }
-//             }
+            selenium: {
+                cli_args: {
+                    'webdriver.chrome.driver': chromedriver.path
+                }
+            }
         },
     }
 }
