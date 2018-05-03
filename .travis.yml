@@ -17,4 +17,3 @@ script:
   - sleep 10
   - npm install
   - npm run nightwatch-cucumber-travis-ios -- --tag iostest
-
