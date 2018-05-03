@@ -1,0 +1,60 @@
+{
+  "src_folders": ["./tests"],
+  "output_folder": "./reports",
+  "custom_commands_path": "./commands",
+  "page_objects_path": "./page-objects",
+  "custom_assertions_path" : "",
+  "globals_path" : "",
+
+  "selenium" : {
+    "start_process" : true,
+    "server_path" : "./node_modules/selenium-standalone/.selenium/selenium-server/3.8.1-server.jar",
+    "log_path" : "",
+    "host" : "127.0.0.1",
+    "port" : 4444,
+    "cli_args" : {
+      "webdriver.chrome.driver" : "./node_modules/selenium-standalone/.selenium/chromedriver/2.36-x64-chromedriver"
+    }
+  },
+
+  "test_settings" : {
+    "default" : {
+      "launch_url" : "http://google.com",
+      "selenium_host"  : "localhost",
+      "selenium_port"  : 4444,
+      "silent": true,
+      "screenshots" : {
+        "enabled" : true,
+        "path" : "reports/screenshots",
+        "on_failure": true,
+        "on_error": true
+      },
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true
+      }
+    },
+
+    "ios" : {
+      "desiredCapabilities" : {
+      "browserName" : "Safari",
+      "platformName" : "iOS",
+      "platformVersion" : "11.2",
+      "deviceName" : "iPad Air 2",
+      "noReset": true
+      }
+    },
+
+    "chrome-headless" : {
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "chromeOptions" : {
+          "args" : ["headless", "no-sandbox", "disable-gpu"]
+        }
+      }
+    }
+  }
+}
