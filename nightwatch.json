@@ -7,7 +7,7 @@
   "globals_path" : "",
 
   "selenium" : {
-    "start_process" : true,
+    "start_process" : false,
     "server_path" : "./node_modules/selenium-standalone/.selenium/selenium-server/3.8.1-server.jar",
     "log_path" : "",
     "host" : "127.0.0.1",
@@ -16,12 +16,14 @@
       "webdriver.chrome.driver" : "./node_modules/selenium-standalone/.selenium/chromedriver/2.36-x64-chromedriver"
     }
   },
-
+  "appium" : {
+    "start_process" : true,
+  },
   "test_settings" : {
     "default" : {
       "launch_url" : "http://google.com",
-      "selenium_host"  : "localhost",
-      "selenium_port"  : 4444,
+      "selenium_host"  : "127.0.0.1",
+      "selenium_port"  : 4723,
       "silent": true,
       "screenshots" : {
         "enabled" : true,
