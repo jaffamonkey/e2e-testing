@@ -28,7 +28,7 @@ module.exports = {
         port: 4444
     },
     appium: {
-        start_process: true
+        start_process: false
     },
     test_settings: {
         default: {
