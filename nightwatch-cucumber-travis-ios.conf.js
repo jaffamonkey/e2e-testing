@@ -34,8 +34,9 @@ module.exports = {
         default: {
             launch_url: 'http://google.com',
             selenium_port: 4723,
-            // selenium_host: '127.0.0.1',
+            selenium_host: '127.0.0.1',
             silent: true,
+            automationName: 'XCUITest',
             desiredCapabilities : {
               automationName: 'xcuitest',
               browserName : 'Safari',
