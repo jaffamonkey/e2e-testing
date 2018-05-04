@@ -21,6 +21,7 @@
     "nightwatch": "0.9.20",
     "nightwatch-cucumber": "9.1.2",
     "selenium-server": "3.7.1",
-    "selenium-standalone": "6.13.0"
+    "selenium-standalone": "6.13.0",
+    "appium-xcuitest-driver": "latest"
   }
 }
