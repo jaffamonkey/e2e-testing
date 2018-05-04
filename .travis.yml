@@ -15,6 +15,9 @@ before_script:
   
 script:
   - npm install -g appium
+  - brew install libimobiledevice --HEAD
+  - npm install -g ios-deploy
+  - gem install xcpretty  
   - npm install
   - appium &
   - sleep 20
