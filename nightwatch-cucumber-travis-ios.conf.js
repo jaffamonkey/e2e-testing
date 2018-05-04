@@ -37,6 +37,7 @@ module.exports = {
             // selenium_host: '127.0.0.1',
             silent: true,
             desiredCapabilities : {
+              automationName: 'xcuitest',
               browserName : 'Safari',
               platformName : 'iOS',
               platformVersion : '10.2',
