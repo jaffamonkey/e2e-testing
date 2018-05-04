@@ -16,6 +16,7 @@ before_script:
 script:
   - npm install -g appium
   - brew install libimobiledevice --HEAD
+  - brew install ideviceinstaller
   - npm install -g ios-deploy
   - gem install xcpretty  
   - npm install
