@@ -18,6 +18,7 @@ script:
   - npm install -g ios-deploy
   - npm install -g appium
   - npm install
+  - ./node_modules/.bin/appium-doctor --ios
   - appium &
   - sleep 20
   - npm run nightwatch-cucumber-travis-ios -- --tag iostest --verbose
