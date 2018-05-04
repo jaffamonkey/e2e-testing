@@ -11,6 +11,7 @@
     "generate-report": "node generate-report.js"
   },
   "dependencies": {
+    "appium-doctor": "latest",
     "chromedriver": "2.37.0",
     "cucumber": "4.2.1",
     "cucumber-html-reporter": "4.0.2",
@@ -21,7 +22,6 @@
     "nightwatch": "0.9.20",
     "nightwatch-cucumber": "9.1.2",
     "selenium-server": "3.7.1",
-    "selenium-standalone": "6.13.0",
-    "appium-xcuitest-driver": "latest"
+    "selenium-standalone": "6.13.0"
   }
 }
