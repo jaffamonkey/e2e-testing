@@ -4,8 +4,8 @@ language: node_js
 node_js: '7'
      
 include:
-    - osx_image: xcode9.2
-      env: DEVICE=10.2
+    - osx_image: xcode9.3
+      env: DEVICE=11.3
 
 before_script:
   - "sudo Xvfb :99 -ac -screen 0 1024x768x8 &"
@@ -15,10 +15,10 @@ before_script:
   
 script:
   - npm install -g appium
-#   - brew install libimobiledevice --HEAD
+  - brew install libimobiledevice --HEAD
 #   - brew install ideviceinstaller
-#   - npm install -g ios-deploy
-#   - gem install xcpretty  
+  - npm install -g ios-deploy   
+  - gem install xcpretty  
   - npm install
   - appium &
   - sleep 20
