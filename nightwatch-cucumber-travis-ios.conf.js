@@ -21,27 +21,26 @@ module.exports = {
     live_output: false,
     disable_colors: false,
     selenium: {
-        start_process: true,
+        start_process: false,
         server_path: seleniumServer.path,
         log_path: '',
-        // host: '127.0.0.1',
-        // port: 4444
+        host: '127.0.0.1',
+        port: 4444
     },
     appium: {
         start_process: true
     },
     test_settings: {
         default: {
-            start_process: false,
             launch_url: 'http://google.com',
-            selenium_port: 4723,
-            // selenium_host: '127.0.0.1',
+            selenium_port: 4444,
+            selenium_host: '127.0.0.1',
             silent: true,
             desiredCapabilities : {
               browserName : 'Safari',
               platformName : 'iOS',
-              platformVersion : '10.2',
-              deviceName : 'iPad Air 2'
+              platformVersion : '11.2',
+              deviceName : 'iPad Air 2',
               // "app": APP_PATH + "ios/PieDrive.app", // path for the ios app you want to test
             },
             screenshots : {
