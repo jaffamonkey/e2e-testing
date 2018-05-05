@@ -21,20 +21,20 @@ module.exports = {
     live_output: false,
     disable_colors: false,
     selenium: {
-        start_process: true,
+        start_process: false,
         server_path: seleniumServer.path,
         log_path: '',
         host: '127.0.0.1',
         port: 4444
     },
     appium: {
-        start_process: false
+        start_process: true
     },
     test_settings: {
         default: {
             launch_url: 'http://google.com',
             selenium_port: 4723,
-            // selenium_host: '127.0.0.1',
+            selenium_host: '127.0.0.1',
             silent: true,
             desiredCapabilities : {
               browserName : 'Safari',
