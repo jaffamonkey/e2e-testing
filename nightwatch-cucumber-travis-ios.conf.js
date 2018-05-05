@@ -38,8 +38,8 @@ module.exports = {
             silent: true,
             desiredCapabilities : {
               browserName : 'Safari',
-              platformName : 'iOS',
-              platformVersion : '10.2',
+              platformName : 'iOS Simulator',
+              platformVersion : '10.3.1',
               deviceName : 'iPad Air 2',
               noReset: false
               // "app": APP_PATH + "ios/PieDrive.app", // path for the ios app you want to test
