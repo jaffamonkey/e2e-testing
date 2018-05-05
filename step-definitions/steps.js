@@ -5,7 +5,7 @@ const shared = client.page.shared();
   Given(/^I open Google's search page$/, () => {
     return client
       .url('http://google.com')
-      .waitForElementVisible('body', 1000);
+      .waitForElementVisible('body', 10000);
   });
 
   Then(/^the title is "([^"]*)"$/, (title) => {
