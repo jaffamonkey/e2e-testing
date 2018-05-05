@@ -37,8 +37,9 @@ module.exports = {
             selenium_host: '127.0.0.1',
             silent: true,
             desiredCapabilities : {
+              automationName: 'XCUITest',
               browserName : 'Safari',
-              platformName : 'iOS Simulator',
+              platformName : 'iOS',
               platformVersion : '10.3',
               deviceName : 'iPad Air 2',
               noReset: false
