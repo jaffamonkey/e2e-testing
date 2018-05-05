@@ -14,8 +14,8 @@ before_script:
   - sleep 3
   
 script:
-  - brew install libimobiledevice --HEAD 
-  - npm install -g ios-deploy
+#   - brew install libimobiledevice --HEAD 
+#   - npm install -g ios-deploy
   - npm install -g appium
   - npm install
   - ./node_modules/.bin/appium-doctor --ios
