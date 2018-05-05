@@ -18,5 +18,5 @@ script:
   - npm install
   - ./node_modules/.bin/appium-doctor --ios
   - appium &
-  - sleep 20
+  - sleep 30
   - npm run nightwatch-cucumber-travis-ios -- --tag iostest --verbose
