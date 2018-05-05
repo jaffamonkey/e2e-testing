@@ -8,8 +8,8 @@ Before(function () {
     .url(client.launch_url)
  });
 
-After(function () {
-    return client
-        .deleteCookies(function() {
-            client.end();
-          });});
+// After(function () {
+//     return client
+//         .deleteCookies(function() {
+//             client.end();
+//           });});
