@@ -24,11 +24,11 @@ module.exports = {
         start_process: false,
         server_path: seleniumServer.path,
         log_path: '',
-        host: '127.0.0.1',
+        // host: '127.0.0.1',
         port: 4444
     },
     appium: {
-        start_process: true
+        start_process: false
     },
     test_settings: {
         default: {
@@ -42,8 +42,8 @@ module.exports = {
               platformName : 'iOS',
               platformVersion : '10.2',
               deviceName : 'iPad Air',
-              fullReset: true
-              // noReset: false
+              fullReset: true,
+              noReset: false
               // "app": APP_PATH + "ios/PieDrive.app", // path for the ios app you want to test
             },
             screenshots : {
