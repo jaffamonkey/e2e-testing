@@ -42,8 +42,8 @@ module.exports = {
               platformName : 'iOS',
               platformVersion : '10.2',
               deviceName : 'iPad Pro (9.7-inch)',
-              fullReset: true,
-              noReset: false
+              // fullReset: true,
+              // noReset: false
               // "app": APP_PATH + "ios/PieDrive.app", // path for the ios app you want to test
             },
             screenshots : {
