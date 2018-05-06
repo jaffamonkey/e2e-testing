@@ -42,6 +42,7 @@ module.exports = {
               platformName : 'iOS',
               platformVersion : '10.2',
               deviceName : 'iPad Air',
+              fullReset: true
               // noReset: false
               // "app": APP_PATH + "ios/PieDrive.app", // path for the ios app you want to test
             },
