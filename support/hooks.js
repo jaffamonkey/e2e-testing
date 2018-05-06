@@ -8,6 +8,12 @@ Before(function () {
     .url(client.launch_url)
  });
 
+After(function () {
+    await driver.close();
+    await sleep(1000);
+    await driver.quit();
+ });});
+
 // After(function () {
 //     return client
 //         .deleteCookies(function() {
