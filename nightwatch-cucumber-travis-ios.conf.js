@@ -20,11 +20,11 @@ module.exports = {
     globals_path : 'step-definitions/globals/globalModules.js',
     live_output: false,
     disable_colors: false,
-    selenium: {
+     selenium: {
         start_process: false,
         server_path: seleniumServer.path,
         log_path: '',
-        // host: '127.0.0.1',
+        host: '127.0.0.1',
         port: 4444
     },
     appium: {
@@ -37,13 +37,12 @@ module.exports = {
             selenium_host: '127.0.0.1',
             silent: true,
             desiredCapabilities : {
-              automationName: 'XCUITest',
-              browserName : 'Safari',
-              platformName : 'iOS',
-              platformVersion : '10.2',
-              deviceName : 'iPad Pro (9.7-inch)',
-              // fullReset: true,
-              // noReset: false
+                automationName: 'XCUITest',
+                browserName : 'Safari',
+                platformName : 'iOS',
+                platformVersion : '11.2',
+                deviceName : 'iPad Air 2',
+                fullReset: true
               // "app": APP_PATH + "ios/PieDrive.app", // path for the ios app you want to test
             },
             screenshots : {
@@ -51,11 +50,11 @@ module.exports = {
                 on_failure : true,
                 path: './reports/screenshots'
             },
-//             selenium: {
-//                 cli_args: {
-//                     'webdriver.chrome.driver': chromedriver.path
-//                 }
-//             }
+            selenium: {
+                cli_args: {
+                    'webdriver.chrome.driver': chromedriver.path
+                }
+            }
         },
     }
 }
