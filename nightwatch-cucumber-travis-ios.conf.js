@@ -28,7 +28,8 @@ module.exports = {
         port: 4444
     },
     appium: {
-        start_process: true
+        start_process: true,
+        server_path: './node_modules/.bin/appium',
     },
     test_settings: {
         default: {
