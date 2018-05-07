@@ -5,7 +5,7 @@ node_js: '7'
      
 include:
   - osx_image: xcode9.3beta
-  - env: DEVICE=11.3
+  - env: DEVICE=10.2
 before_script:
   - "Xvfb :99 -ac -screen 0 1024x768x8 &"
 #   - "export DISPLAY=:99.0"
@@ -19,6 +19,6 @@ script:
 #   - npm install -g appium
   - npm install
   - ./node_modules/.bin/appium-doctor --ios
-#   - ./node_modules/.bin/appium &
-#   - sleep 30
+  - ./node_modules/.bin/appium &
+  - sleep 30
   - npm run nightwatch-cucumber-travis-ios -- --tag iostest
