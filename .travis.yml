@@ -5,6 +5,7 @@ node_js: '7'
      
 include:
   - osx_image: xcode9.3
+  - env: DEVICE=11.3
 before_script:
   - "sudo Xvfb :99 -ac -screen 0 1024x768x8 &"
 #   - "export DISPLAY=:99.0"
