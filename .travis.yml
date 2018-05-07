@@ -15,7 +15,7 @@ before_script:
 script:
 #   - brew install libimobiledevice --HEAD 
 #   - npm install -g ios-deploy
-#   - "sh -c lsof -P | grep ':4723' | awk '{print $2}' | xargs kill -9"
+  - "sh -c lsof -P | grep ':4723' | awk '{print $2}' | xargs kill -9"
 #   - npm install -g appium
   - npm install
   - ./node_modules/.bin/appium-doctor --ios
