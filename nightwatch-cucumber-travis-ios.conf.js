@@ -24,7 +24,7 @@ module.exports = {
         start_process: false,
         server_path: seleniumServer.path,
         log_path: '',
-        host: '127.0.0.1',
+        // host: '127.0.0.1',
         port: 4444
     },
     appium: {
@@ -33,9 +33,9 @@ module.exports = {
     test_settings: {
         default: {
             launch_url: 'http://google.com',
-            // selenium_port: 4723,
+            selenium_port: 4723,
             // selenium_host: '127.0.0.1',
-            silent: true,
+//             silent: true,
             desiredCapabilities : {
                 automationName: 'XCUITest',
                 browserName : 'Safari',
