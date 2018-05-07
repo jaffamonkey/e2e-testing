@@ -14,7 +14,7 @@
     "appium": "latest",
     "appium-doctor": "latest",
     "chromedriver": "2.37.0",
-    "cucumber": "4.2.1",
+    "cucumber": "4.0.0",
     "cucumber-html-reporter": "4.0.2",
     "cucumber-pretty": "1.4.1",
     "electron": "1.8.6",
