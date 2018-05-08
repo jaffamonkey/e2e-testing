@@ -5,8 +5,8 @@ node_js: '8'
 osx_image: xcode9.3
 
 before_script:
-  - "sh install-quartz.sh"
-  - "Xvfb :99 -ac -screen 4 1024x768x8 &"
+#   - "sh install-quartz.sh"
+  - Xvfb :99 -ac -screen 0 1024x768x8 &; fi
   - sleep 3
   
 # script:
