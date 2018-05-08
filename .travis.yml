@@ -12,6 +12,6 @@ before_script:
 # script:
   - npm install
   - ./node_modules/.bin/appium-doctor --ios
-  - appium &
+  - ./node_modules/.bin/appium &
   - sleep 10
   - npm run nightwatch-cucumber-travis-ios -- --tag iostest
