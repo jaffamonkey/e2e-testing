@@ -10,8 +10,8 @@ before_script:
   - sleep 3
   
 # script:
-#   - npm install
-#   - ./node_modules/.bin/appium-doctor --ios
-#   - appium &
-#   - sleep 10
-#   - npm run nightwatch-cucumber-travis-ios -- --tag iostest
+  - npm install
+  - ./node_modules/.bin/appium-doctor --ios
+  - appium &
+  - sleep 10
+  - npm run nightwatch-cucumber-travis-ios -- --tag iostest
