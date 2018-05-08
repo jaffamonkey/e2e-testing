@@ -8,15 +8,9 @@ include:
   - env: DEVICE=11.3
 before_script:
   - "Xvfb :99 -ac -screen 0 1024x768x8 &"
-#   - "export DISPLAY=:99.0"
-#   - "sh -e /etc/init.d/xvfb start"
   - sleep 3
   
 script:
-  - brew install libimobiledevice --HEAD 
-  - npm install -g ios-deploy
-#   - "sh -c lsof -P | grep ':4723' | awk '{print $2}' | xargs kill -9"
-#   - npm install -g appium
   - npm install
   - ./node_modules/.bin/appium-doctor --ios
   - ./node_modules/.bin/appium &
