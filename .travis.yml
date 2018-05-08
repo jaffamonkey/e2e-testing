@@ -9,7 +9,7 @@ before_script:
   - sleep 3
   
 script:
-  - yarn
+  - npm install
   - ./node_modules/.bin/appium-doctor --ios
   - ./node_modules/.bin/appium &
   - sleep 30
