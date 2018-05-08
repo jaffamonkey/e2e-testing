@@ -6,12 +6,12 @@ osx_image: xcode9.3
 
 before_script:
   - "Xvfb :99 -ac -screen 0 1024x768x8 &"
-  - sleep 3
+#   - sleep 3
   
-script:
-  - npm install
-  - npm install -g appium
-  - ./node_modules/.bin/appium-doctor --ios
-  - appium &
-  - sleep 30
-  - npm run nightwatch-cucumber-travis-ios -- --tag iostest
+# script:
+#   - npm install
+#   - npm install -g appium
+#   - ./node_modules/.bin/appium-doctor --ios
+#   - appium &
+#   - sleep 30
+#   - npm run nightwatch-cucumber-travis-ios -- --tag iostest
