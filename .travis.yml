@@ -12,7 +12,7 @@ addons:
      - google-chrome-stable
 
 before_script:
-  - "export DISPLAY=:99.0"
+  - "export DISPLAY=:1337"
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3
   
