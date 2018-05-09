@@ -6,8 +6,7 @@ osx_image: xcode9.3
 
 before_script:
   - brew cask install xquartz
-  - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then ( sudo Xvfb :99 -ac -screen 9 1024x768x8; echo ok )& fi
-#   - "Xvfb :99 -ac -screen 0 1024x768x8"
+  - "Xvfb :99 -ac -screen 9 1024x768x8"
   - sleep 3
   
 script:
