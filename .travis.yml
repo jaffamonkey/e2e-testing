@@ -12,7 +12,7 @@ addons:
      - google-chrome-stable
 
 before_script:
-  - "Xvfb :99 & export DISPLAY=:99"
+  - "Xvfb :99 && export DISPLAY=:99"
   - sleep 3
   
 install:
