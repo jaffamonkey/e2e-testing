@@ -16,3 +16,4 @@ script:
   - ./node_modules/.bin/appium &
   - sleep 20
   - npm run nightwatch-cucumber-travis-ios -- --tag iostest
+
