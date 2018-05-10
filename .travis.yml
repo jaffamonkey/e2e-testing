@@ -6,14 +6,14 @@ osx_image: xcode9.3
 
 before_script:
   - brew cask install xquartz
-#   - "export DISPLAY=:5.0"
-#   - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then ( sudo Xvfb :5 -ac -screen 0 1024x768x8; echo ok )& fi
-#   - sleep 3 # give xvfb some time to start
+  - "export DISPLAY=:5.0"
+  - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then ( sudo Xvfb :5 -ac -screen 0 1024x768x8; echo ok )& fi
+  - sleep 3 # give xvfb some time to start
   
 script:
   - npm install
   - npm install -g appium
   - ./node_modules/.bin/appium-doctor --ios
   - appium &
-  - sleep 10
+  - sleep 20
   - npm run nightwatch-cucumber-travis-ios -- --tag iostest
