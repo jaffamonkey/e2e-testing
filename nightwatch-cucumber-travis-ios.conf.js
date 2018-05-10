@@ -58,7 +58,7 @@ module.exports = {
             }
         },
         ios: {
-            selenium_host: '127.0.0.1',
+            // selenium_host: '127.0.0.1',
             selenium_port: 4723,
             desiredCapabilities : {
                 automationName: 'XCUITest',
