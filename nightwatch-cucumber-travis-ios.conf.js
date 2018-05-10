@@ -60,6 +60,7 @@ module.exports = {
         ios: {
             // selenium_host: '127.0.0.1',
             selenium_port: 4723,
+            server_path: seleniumServer.path,
             desiredCapabilities : {
                 automationName: 'XCUITest',
                 browserName : 'Safari',
