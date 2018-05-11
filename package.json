@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "appium": "latest",
+    "appium-support": "latest",
+    "appium-xcode": "latest",
     "appium-doctor": "latest",
     "chromedriver": "2.37.0",
     "cucumber": "4.0.0",
