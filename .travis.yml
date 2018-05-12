@@ -7,8 +7,8 @@ env: DEVICE=11.2
 
 before_script:
   - brew cask install xquartz
-  - "export DISPLAY=:5.0"
-  - "Xvfb :5 -ac -screen 0 1024x768x8 &"
+  - export DISPLAY=:5.0
+  - Xvfb :5 -ac -screen 0 1024x768x8 &
   - sleep 3 # give xvfb some time to start
   - brew update
   - brew cask install java
