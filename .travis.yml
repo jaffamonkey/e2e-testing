@@ -11,8 +11,8 @@ before_script:
   - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then ( sudo Xvfb :5 -ac -screen 0 1024x768x8; echo ok )& fi
   - sleep 3 # give xvfb some time to start
   - brew update
-  - brew install --HEAD libimobiledevice
-  - brew install --HEAD ideviceinstaller
+  - brew install libimobiledevice
+  - brew install ideviceinstaller
   - brew install ios-webkit-debug-proxy
   - brew install carthage 
   - npm install -g ios-deploy
