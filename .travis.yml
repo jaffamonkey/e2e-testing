@@ -24,7 +24,7 @@ script:
   - ./node_modules/.bin/appium-doctor --ios
   - ./node_modules/.bin/appium &
   - xcrun simctl
-  - xcrun instruments -w "iPhone 5 (8.0 Simulator)"
+  - xcrun instruments -w "iPhone 7 (11.2)"
   - sleep 20
   - npm run nightwatch-cucumber-travis-ios -- --tag iostest
 
