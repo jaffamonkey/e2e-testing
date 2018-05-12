@@ -49,22 +49,11 @@
             "keyword": "Before",
             "hidden": true,
             "match": {
-              "location": "node_modules/apickli/apickli-gherkin.js:30"
+              "location": "support/hooks.js:6"
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "match": {
-              "location": "support/hooks.js:12"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 7005000000
+              "duration": 44058000000
             }
           },
           {
@@ -77,7 +66,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2053000000
+              "duration": 2063000000
             }
           },
           {
@@ -90,7 +79,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 13000000
+              "duration": 16000000
             }
           },
           {
@@ -103,18 +92,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 44000000
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "match": {
-              "location": "support/hooks.js:17"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 254000000
+              "duration": 48000000
             }
           }
         ]
@@ -167,21 +145,11 @@
             "keyword": "Before",
             "hidden": true,
             "match": {
-              "location": "node_modules/apickli/apickli-gherkin.js:30"
-            },
-            "result": {
-              "status": "passed"
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "match": {
-              "location": "support/hooks.js:12"
+              "location": "support/hooks.js:6"
             },
             "result": {
               "status": "passed",
-              "duration": 5935000000
+              "duration": 2022000000
             }
           },
           {
@@ -194,7 +162,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 22662000000
+              "duration": 24735000000
             }
           },
           {
@@ -207,18 +175,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 10143000000
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "match": {
-              "location": "support/hooks.js:17"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 220000000
+              "duration": 10175000000
             }
           }
         ]

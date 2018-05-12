@@ -18,11 +18,12 @@ before_script:
   - brew install ideviceinstaller
   - brew install ios-webkit-debug-proxy
   - npm install -g ios-deploy
+  - npm install -g appium
   
 script:
 #   - npm install
-  - ./node_modules/.bin/appium-doctor --ios
-  - ./node_modules/.bin/appium &
+  - appium-doctor --ios
+  - appium &
   - xcrun simctl
   - xcrun instruments -w "iPhone 7 (11.2)"
   - sleep 20
