@@ -11,6 +11,9 @@ before_script:
   - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then ( sudo Xvfb :5 -ac -screen 0 1024x768x8; echo ok )& fi
   - sleep 3 # give xvfb some time to start
   - brew update
+  - brew cask install java
+  - export JAVA_HOME=$(/usr/libexec/java_home)
+  - brew update
   - brew install libimobiledevice
   - brew install ideviceinstaller
   - brew install ios-webkit-debug-proxy
