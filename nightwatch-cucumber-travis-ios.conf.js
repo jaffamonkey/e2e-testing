@@ -58,7 +58,7 @@ module.exports = {
             }
         },
         ios: {
-            selenium_host: 'localhost',
+            // selenium_host: 'localhost',
             selenium_port: 4723,
 //             server_path: seleniumServer.path,
             desiredCapabilities : {
