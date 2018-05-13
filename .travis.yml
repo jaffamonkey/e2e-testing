@@ -20,12 +20,13 @@ before_script:
   - npm install -g ios-deploy
   - npm install -g appium
   
+  
 script:
 #   - npm install
   - appium-doctor --ios
   - appium &
   - xcrun simctl
-  - xcrun instruments -w "iPhone 7 (11.2)"
+  - xcrun instruments -w "B3CB51DA-1477-44BB-BC72-7945C3B7F289"
   - sleep 20
   - npm run nightwatch-cucumber-travis-ios -- --tag iostest
 
