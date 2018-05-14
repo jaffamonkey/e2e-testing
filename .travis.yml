@@ -3,21 +3,22 @@ os: osx
 language: node_js
 node_js: '7'
 osx_image: xcode9.2
-env: DEVICE=11.2   
+env: DEVICE=11.2       
+rvm: system
 
 before_script:
-  - brew cask install xquartz
-  - export DISPLAY=:5.0
-  - Xvfb :5 -ac -screen 0 1024x768x8 &
-  - sleep 3 # give xvfb some time to start
-  - brew update
-  - brew cask install java
-  - export JAVA_HOME=$(/usr/libexec/java_home)
-  - brew update
-  - brew install libimobiledevice
-  - brew install ideviceinstaller
-  - brew install ios-webkit-debug-proxy
-  - npm install -g ios-deploy
+#   - brew cask install xquartz
+#   - export DISPLAY=:5.0
+#   - Xvfb :5 -ac -screen 0 1024x768x8 &
+#   - sleep 3 # give xvfb some time to start
+#   - brew update
+#   - brew cask install java
+#   - export JAVA_HOME=$(/usr/libexec/java_home)
+#   - brew update
+#   - brew install libimobiledevice
+#   - brew install ideviceinstaller
+#   - brew install ios-webkit-debug-proxy
+#   - npm install -g ios-deploy
   - npm install -g appium
   
   
