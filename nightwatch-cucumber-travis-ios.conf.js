@@ -21,14 +21,14 @@ module.exports = {
     live_output: false,
     disable_colors: false,
     selenium: {
-        start_process: false,
+        start_process: true,
         server_path: seleniumServer.path,
         log_path: '',
         // host: '127.0.0.1',
         port: 4444
     },
     appium: {
-        start_process: false,
+        start_process: true,
         server_path: './node_modules/.bin/appium',
     },
     test_settings: {
