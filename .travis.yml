@@ -5,9 +5,10 @@ node_js: '7'
 osx_image: xcode9.2
 env: DEVICE=11.2       
 rvm: system
-
+  
 before_script:
-#   - brew cask install xquartz
+    - brew cask install xquartz
+`   - sleep 300
 #   - export DISPLAY=:5.0
 #   - Xvfb :5 -ac -screen 0 1024x768x8 &
 #   - sleep 3 # give xvfb some time to start
