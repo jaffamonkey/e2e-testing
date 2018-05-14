@@ -8,6 +8,7 @@ rvm: system
   
 before_script:
     - brew cask install xquartz
+    - launchctl list | grep xquartz
 `   - sleep 300
 #   - export DISPLAY=:5.0
 #   - Xvfb :5 -ac -screen 0 1024x768x8 &
@@ -20,7 +21,6 @@ before_script:
 #   - brew install ideviceinstaller
 #   - brew install ios-webkit-debug-proxy
 #   - npm install -g ios-deploy
-  - carthage version
   - npm install -g appium
   
   
