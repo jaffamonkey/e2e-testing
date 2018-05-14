@@ -40,6 +40,7 @@ module.exports = {
                 // automationName: 'XCUITest',
                 browserName : 'Safari',
                 platformName : 'iOS',
+                useNewWDA: true,
                 platformVersion : '11.2',
                 deviceName : 'iPad Air 2',
                 fullReset: true
@@ -62,6 +63,7 @@ module.exports = {
 //             server_path: seleniumServer.path,
             desiredCapabilities : {
                 automationName: 'XCUITest',
+                useNewWDA: true,
                 browserName : 'Safari',
                 platformName : 'iOS',
                 platformVersion : '11.2',
