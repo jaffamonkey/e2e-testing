@@ -21,7 +21,7 @@ module.exports = {
     live_output: false,
     disable_colors: false,
     selenium: {
-        start_process: true,
+        start_process: false,
         server_path: seleniumServer.path,
         log_path: '',
         // host: '127.0.0.1',
@@ -29,13 +29,12 @@ module.exports = {
     },
     appium: {
         start_process: true,
-        server_path: './node_modules/.bin/appium',
     },
     test_settings: {
         default: {
             launch_url: 'http://google.com',
             selenium_port: 4723,
-            selenium_host: '0.0.0.0',
+       //     selenium_host: '0.0.0.0',
 //             silent: true,
             desiredCapabilities : {
                 automationName: 'XCUITest',
