@@ -2,7 +2,7 @@ sudo: required
 os: osx
 language: objective-c
 node_js: '9'
-osx_image: xcode9.2
+osx_image: xcode9.3
 env: DEVICE=11.2       
 rvm: system
   
@@ -21,7 +21,7 @@ before_script:
 #   - brew install ideviceinstaller
 #   - brew install ios-webkit-debug-proxy
 #   - npm install -g ios-deploy
-  - npm install -g appium@1.7.1
+  - npm install -g appium
   - npm install -g appium-doctor
   
 script:
