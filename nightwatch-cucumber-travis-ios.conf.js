@@ -35,10 +35,10 @@ module.exports = {
         default: {
             launch_url: 'http://google.com',
             selenium_port: 4723,
-            // selenium_host: '127.0.0.1',
+            selenium_host: '127.0.0.1',
 //             silent: true,
             desiredCapabilities : {
-                automationName: 'XCUITest',
+//                 automationName: 'XCUITest',
                 browserName : 'Safari',
                 platformName : 'iOS',
                 platformVersion : '11.3',
@@ -62,7 +62,7 @@ module.exports = {
             selenium_port: 4723,
 //             server_path: seleniumServer.path,
             desiredCapabilities : {
-                automationName: 'XCUITest',
+                // automationName: 'XCUITest',
                 browserName : 'Safari',
                 platformName : 'iOS',
                 platformVersion : '11.2',
