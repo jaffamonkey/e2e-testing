@@ -28,7 +28,6 @@ script:
   - appium-doctor --ios
   - appium &
   - instruments -s devices
-  - xcrun simctl
   - xcrun instruments -w "B3CB51DA-1477-44BB-BC72-7945C3B7F289"
   - sleep 20
   - npm run nightwatch-cucumber-travis-ios -- --tag iostest
