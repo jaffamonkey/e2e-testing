@@ -3,10 +3,10 @@ const reporter = require('cucumber-html-reporter');
 var path = require('path');
 var {After, Before} = require('cucumber');
 
-// Before(function () {
-//     return client
-//     .url(client.launch_url)
-//  });
+Before(function () {
+    return client
+    .url(client.launch_url)
+ });
 
 // After(function () {
 //     await this.close();
@@ -14,8 +14,8 @@ var {After, Before} = require('cucumber');
 //     await this.quit();
 //  });});
 
-After(function () {
-    return client
-        .deleteCookies(function() {
-            client.end();
-          });});
+// After(function () {
+//     return client
+//         .deleteCookies(function() {
+//             client.end();
+//           });});
