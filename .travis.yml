@@ -24,7 +24,7 @@ before_script:
   - npm install -g appium-doctor
   
 script:
-#   - npm install
+  - npm install
   - appium-doctor --ios
   - appium &
   # - xcrun simctl
