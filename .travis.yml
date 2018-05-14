@@ -21,7 +21,7 @@ before_script:
 #   - brew install ideviceinstaller
 #   - brew install ios-webkit-debug-proxy
 #   - npm install -g ios-deploy
-  - npm install -g appium@1.6.5
+  - npm install -g appium@1.7.1
   - npm install -g appium-doctor
   
 script:
