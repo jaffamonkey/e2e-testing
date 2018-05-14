@@ -1,6 +1,6 @@
 sudo: required
 os: osx
-language: node_js
+language: objective-c
 node_js: '7'
 osx_image: xcode9.2
 env: DEVICE=11.2       
