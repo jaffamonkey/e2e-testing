@@ -24,26 +24,25 @@ module.exports = {
         start_process: false,
         server_path: seleniumServer.path,
         log_path: '',
-        // host: '127.0.0.1',
+        host: '127.0.0.1',
         port: 4444
     },
     appium: {
-        start_process: false,
+        start_process: false
     },
     test_settings: {
         default: {
             launch_url: 'http://google.com',
             selenium_port: 4723,
-       //     selenium_host: '0.0.0.0',
-//             silent: true,
+            selenium_host: '127.0.0.1',
+            silent: true,
             desiredCapabilities : {
-                // automationName: 'XCUITest',
+                automationName: 'XCUITest',
                 browserName : 'Safari',
                 platformName : 'iOS',
-                noReset: false,                
                 platformVersion : '11.2',
                 deviceName : 'iPad Air 2',
-                fullReset: true
+                noReset: false
               // "app": APP_PATH + "ios/PieDrive.app", // path for the ios app you want to test
             },
             screenshots : {
@@ -55,21 +54,6 @@ module.exports = {
                 cli_args: {
                     'webdriver.chrome.driver': chromedriver.path
                 }
-            }
-        },
-        ios: {
-            // selenium_host: 'localhost',
-            selenium_port: 4723,
-//             server_path: seleniumServer.path,
-            desiredCapabilities : {
-                automationName: 'XCUITest',
-                noReset: false,                
-                browserName : 'Safari',
-                platformName : 'iOS',
-                platformVersion : '11.2',
-                deviceName : 'iPhone 7',
-                fullReset: true
-              // "app": APP_PATH + "ios/PieDrive.app", // path for the ios app you want to test
             }
         },
     }
