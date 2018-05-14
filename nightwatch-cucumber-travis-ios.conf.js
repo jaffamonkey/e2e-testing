@@ -40,7 +40,7 @@ module.exports = {
                 // automationName: 'XCUITest',
                 browserName : 'Safari',
                 platformName : 'iOS',
-                platformVersion : '11.3',
+                platformVersion : '11.2',
                 deviceName : 'iPad Air 2',
                 fullReset: true
               // "app": APP_PATH + "ios/PieDrive.app", // path for the ios app you want to test
@@ -65,7 +65,7 @@ module.exports = {
                 browserName : 'Safari',
                 platformName : 'iOS',
                 platformVersion : '11.2',
-                deviceName : 'iPad Air 2',
+                deviceName : 'iPhone 7',
                 fullReset: true
               // "app": APP_PATH + "ios/PieDrive.app", // path for the ios app you want to test
             }
