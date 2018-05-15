@@ -21,15 +21,16 @@ before_script:
 #   - brew install ideviceinstaller
 #   - brew install ios-webkit-debug-proxy
 #   - npm install -g ios-deploy
-  - cd /usr/local/cellar/usbmuxd/
-  - ls
-#   - npm install -g appium
-#   - npm install -g appium-doctor
-#   - npm install wd
+  - brew uninstall carthage
+  - brew install carthage
+  - brew link --overwrite carthage
+  - npm install -g appium
+  - npm install -g appium-doctor
+  - npm install wd
   
-# script:
-#   - npm install
-#   - appium-doctor --ios
-#   - appium &
-#   - sleep 20
-#   - node_modules/.bin/nightwatch -c ./nightwatch-cucumber-travis-ios.conf.js -e default
+script:
+  - npm install
+  - appium-doctor --ios
+  - appium &
+  - sleep 20
+  - node_modules/.bin/nightwatch -c ./nightwatch-cucumber-travis-ios.conf.js -e default
