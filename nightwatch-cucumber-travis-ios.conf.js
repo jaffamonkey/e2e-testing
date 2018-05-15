@@ -20,22 +20,23 @@ module.exports = {
     globals_path : 'step-definitions/globals/globalModules.js',
     live_output: false,
     disable_colors: false,
-    selenium: {
-        start_process: false,
-        server_path: seleniumServer.path,
-        log_path: '',
-        host: '127.0.0.1',
-        port: 4444
-    },
+//     selenium: {
+//         start_process: false,
+//         server_path: seleniumServer.path,
+//         log_path: '',
+//         host: '127.0.0.1',
+//         port: 4444
+//     },
     appium: {
         start_process: false
     },
     test_settings: {
         default: {
             launch_url: 'http://google.com',
-            selenium_port: 4723,
-            selenium_host: '127.0.0.1',
-            silent: true,
+            selenium_start_process: false,
+            selenium_port : 4723,
+            selenium_host : '127.0.0.1',
+            silent": true,
             desiredCapabilities : {
 //                 automationName: 'XCUITest',
                 automationName: 'Appium',
