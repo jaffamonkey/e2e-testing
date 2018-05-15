@@ -51,11 +51,6 @@ module.exports = {
                 on_failure : true,
                 path: './reports/screenshots'
             },
-            selenium: {
-                cli_args: {
-                    'webdriver.chrome.driver': chromedriver.path
-                }
-            }
         },
     }
 }
