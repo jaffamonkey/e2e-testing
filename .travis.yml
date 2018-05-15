@@ -23,6 +23,7 @@ before_script:
 #   - npm install -g ios-deploy
   - npm install -g appium
   - npm install -g appium-doctor
+  - npm install wd
   
 script:
   - npm install
