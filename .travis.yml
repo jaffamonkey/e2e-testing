@@ -24,8 +24,6 @@ before_script:
   - brew uninstall carthage
   - brew install carthage
   - brew link --overwrite carthage
-  - cd /usr/local/Cellar/usbmuxd
-  - ls
   - npm install -g appium-doctor
   - npm install wd
   
