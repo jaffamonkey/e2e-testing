@@ -11,8 +11,8 @@ before_script:
   - brew cask install xquartz
 #   - sleep 300
   - export DISPLAY=:5.0
-#   - Xvfb :5 -ac -screen 0 1024x768x8 &
-#   - sleep 3 # give xvfb some time to start
+  - "Xvfb :5 -ac -screen 0 1024x768x8 &"
+  - sleep 3 # give xvfb some time to start
 #   - brew update
 #   - brew cask install java
 #   - export JAVA_HOME=$(/usr/libexec/java_home)
@@ -24,13 +24,13 @@ before_script:
   - brew uninstall carthage
   - brew install carthage
   - brew link --overwrite carthage
-  - npm install -g appium
+  - "cd usr/local/cellar/usbmuxd && ls"
   - npm install -g appium-doctor
   - npm install wd
   
 script:
   - npm install
   - appium-doctor --ios
-  - appium &
+  - ./node_modules/.bin/appium &
   - sleep 20
   - node_modules/.bin/nightwatch -c ./nightwatch-cucumber-travis-ios.conf.js -e default
