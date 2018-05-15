@@ -36,7 +36,7 @@ module.exports = {
             selenium_start_process: false,
             selenium_port : 4723,
             selenium_host : '127.0.0.1',
-            silent": true,
+            silent: true,
             desiredCapabilities : {
 //                 automationName: 'XCUITest',
                 automationName: 'Appium',
