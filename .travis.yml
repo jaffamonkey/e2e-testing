@@ -32,4 +32,4 @@ script:
   - appium-doctor --ios
   - ./node_modules/.bin/appium &
   - sleep 20
-  - node_modules/.bin/nightwatch -c ./nightwatch-cucumber-travis-ios.conf.js -e default
+  - npm run nightwatch-cucumber-travis-ios -- --tag iostest
