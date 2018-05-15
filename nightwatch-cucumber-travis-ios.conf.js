@@ -38,6 +38,7 @@ module.exports = {
             silent: true,
             desiredCapabilities : {
 //                 automationName: 'XCUITest',
+                automationName: 'Appium',
                 browserName : 'Safari',
                 platformName : 'iOS',
                 platformVersion : '11.2',
