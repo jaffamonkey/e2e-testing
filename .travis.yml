@@ -8,6 +8,7 @@ node_js: 9
 xcode_sdk: iphonesimulator
 
 before_script:
+  - brew install git
   - brew update && brew install libsodium
   # - git clone https://github.com/kinfoundation/travis-stellar-core-macos.git
   # - cd travis-stellar-core-macos && ./setup.sh && cd ..
@@ -25,7 +26,7 @@ before_script:
   - npm install -g appium-doctor
   
 script:
-  - git config lfs.https://github.com/jaffamonkey/nightwatchjs_cucumberjs4.git/info/lfs.access = basic
+  - git config lfs.https://github.com/jaffamonkey/nightwatchjs_cucumberjs4.git/info/lfs.access=basic
   - npm install
   - appium-doctor --ios
   - appium &
