@@ -35,15 +35,15 @@ module.exports = {
       //      launch_url : 'http://127.0.0.1:4723/wd/hub',
       //      selenium_start_process: false,
             selenium_port : 4723,
-     //       selenium_host : '127.0.0.1',
+     //     selenium_host : '127.0.0.1',
             silent: true,
             desiredCapabilities : {
-//                 automationName: 'XCUITest',
+//              automationName: 'XCUITest',
                 browserName : 'Safari',
                 platformName : 'iOS',
                 platformVersion : '11.2',
                 deviceName : 'iPad Air 2',
-                noReset: false
+                noReset: true
               // "app": APP_PATH + "ios/PieDrive.app", // path for the ios app you want to test
             },
             screenshots : {
