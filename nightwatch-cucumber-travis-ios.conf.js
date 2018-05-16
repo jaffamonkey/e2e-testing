@@ -20,25 +20,25 @@ module.exports = {
     globals_path : 'step-definitions/globals/globalModules.js',
     live_output: false,
     disable_colors: false,
-    selenium: {
-        start_process: false,
-        server_path: seleniumServer.path,
-        log_path: '',
-        host: '127.0.0.1',
-        port: 4444
-    },
+//     selenium: {
+//         start_process: false,
+//         server_path: seleniumServer.path,
+//         log_path: '',
+//         host: '127.0.0.1',
+//         port: 4444
+//     },
     appium: {
         start_process: false
     },
     test_settings: {
         default: {
-            launch_url: 'http://google.com',
-            selenium_port: 4723,
-            selenium_host: '127.0.0.1',
+      //      launch_url : 'http://127.0.0.1:4723/wd/hub',
+      //      selenium_start_process: false,
+            selenium_port : 4723,
+     //       selenium_host : '127.0.0.1',
             silent: true,
             desiredCapabilities : {
 //                 automationName: 'XCUITest',
-                automationName: 'Appium',
                 browserName : 'Safari',
                 platformName : 'iOS',
                 platformVersion : '11.2',
@@ -51,11 +51,6 @@ module.exports = {
                 on_failure : true,
                 path: './reports/screenshots'
             },
-            selenium: {
-                cli_args: {
-                    'webdriver.chrome.driver': chromedriver.path
-                }
-            }
         },
     }
 }

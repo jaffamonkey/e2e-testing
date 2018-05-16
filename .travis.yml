@@ -32,4 +32,4 @@ script:
   - appium &
   # - ios-webkit-debug-proxy -f http://www.bbc.co.uk &
   - sleep 20
-  - node_modules/.bin/nightwatch -c ./nightwatch-cucumber-travis-ios.conf.js -e default
+  - npm run nightwatch-cucumber-travis-ios -- --tag iostest

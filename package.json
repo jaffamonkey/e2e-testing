@@ -5,16 +5,13 @@
   "devDependencies": {},
   "scripts": {
     "e2e-debug": "node --inspect node_modules/nightwatch/bin/nightwatch",
-    "nightwatch-cucumber-travis-ios": "node_modules/.bin/nightwatch -c ./nightwatch-cucumber-travis-ios.conf.js -e ios",
+    "nightwatch-cucumber-travis-ios": "node_modules/.bin/nightwatch -c ./nightwatch-cucumber-travis-ios.conf.js -e default",
     "nightwatch-cucumber-ios": "node_modules/.bin/nightwatch -c ./nightwatch-cucumber-ios.conf.js -e default",
     "travis-ios": "node_modules/.bin/nightwatch -c ./nightwatch-ios.conf.js -e ios",
     "generate-report": "node generate-report.js"
   },
   "dependencies": {
-    "appium-support": "latest",
-    "appium-xciutest-driver": "latest",
-    "appium-xcode": "latest",
-    "appium-xcuitest-driver": "^2.80.0",
+    "appium-xcuitest-driver": "2.80.0",
     "chromedriver": "2.37.0",
     "cucumber": "4.0.0",
     "cucumber-html-reporter": "4.0.2",
