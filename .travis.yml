@@ -25,6 +25,7 @@ before_script:
   - npm install -g appium-doctor
   
 script:
+  - git config lfs.https://github.com/jaffamonkey/nightwatchjs_cucumberjs4.git/info/lfs.access = basic
   - npm install
   - appium-doctor --ios
   - appium &
