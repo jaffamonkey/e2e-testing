@@ -26,7 +26,6 @@ before_script:
   - npm install -g ios-webkit-debug-proxy
   
 script:
-  - cd /Users/travis/build/jaffamonkey/nightwatch_appium
   - npm install
   - appium-doctor --ios
   - appium &
