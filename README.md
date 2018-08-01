@@ -15,7 +15,7 @@ $ npm install
 Install selenium
 
 ```
-$ npm run selenium-install
+$ ./node_modules/.bin/selenium-standalone install
 ```
 
 ### Step 3

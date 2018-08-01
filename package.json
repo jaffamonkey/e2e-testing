@@ -11,6 +11,7 @@
     "generate-report": "node generate-report.js"
   },
   "dependencies": {
+    "apickli": "latest",
     "appium-xcuitest-driver": "2.80.0",
     "chromedriver": "2.37.0",
     "cucumber": "4.0.0",
@@ -21,7 +22,6 @@
     "minimist": "1.2.0",
     "nightwatch": "0.9.20",
     "nightwatch-cucumber": "9.1.2",
-    "selenium-server": "3.7.1",
-    "selenium-standalone": "6.13.0"
+    "selenium-server": "3.8.1"
   }
 }

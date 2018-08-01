@@ -1,6 +1,114 @@
 [
   {
     "keyword": "Feature",
+    "name": "httpbin.org api test",
+    "line": 2,
+    "id": "httpbin.org-api-test",
+    "tags": [
+      {
+        "name": "@api",
+        "line": 1
+      },
+      {
+        "name": "@ci",
+        "line": 1
+      }
+    ],
+    "uri": "features/api.feature",
+    "elements": [
+      {
+        "id": "httpbin.org-api-test;setting-headers-in-get-request",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Setting headers in GET request",
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          },
+          {
+            "name": "@ci",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "support/hooks.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9871000000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "support/init.js:7"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I set User-Agent header to apickli",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I GET /get",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:91"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 389000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "response code should be 200",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:167"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
     "name": "Google Search tagged",
     "line": 2,
     "id": "google-search-tagged",
@@ -49,11 +157,31 @@
             "keyword": "Before",
             "hidden": true,
             "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:29"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
               "location": "support/hooks.js:6"
             },
             "result": {
               "status": "passed",
-              "duration": 44058000000
+              "duration": 397000000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "support/init.js:7"
+            },
+            "result": {
+              "status": "passed"
             }
           },
           {
@@ -66,7 +194,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2063000000
+              "duration": 576000000
             }
           },
           {
@@ -79,7 +207,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 16000000
+              "duration": 13000000
             }
           },
           {
@@ -92,7 +220,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 48000000
+              "duration": 69000000
             }
           }
         ]
@@ -145,11 +273,32 @@
             "keyword": "Before",
             "hidden": true,
             "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
               "location": "support/hooks.js:6"
             },
             "result": {
               "status": "passed",
-              "duration": 2022000000
+              "duration": 327000000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "support/init.js:7"
+            },
+            "result": {
+              "status": "passed"
             }
           },
           {
@@ -162,7 +311,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 24735000000
+              "duration": 4718000000
             }
           },
           {
@@ -175,7 +324,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 10175000000
+              "duration": 533000000
             }
           }
         ]
