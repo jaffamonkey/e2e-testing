@@ -10,15 +10,7 @@ Install all dependencies
 $ npm install
 ```
 
-### Step 2
-
-Install selenium
-
-```
-$ ./node_modules/.bin/selenium-standalone install
-```
-
-### Step 3
+### Step 23
 
 To run:
 
@@ -41,7 +33,7 @@ $ node_modules/.bin/nightwatch -c ./nightwatch-cucumber-parallel.conf.js -- --ta
 ```
 
 
-### Step 4
+### Step 3
 
 Generate HTML report (with screenshots)
 
