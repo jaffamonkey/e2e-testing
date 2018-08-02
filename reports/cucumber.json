@@ -41,7 +41,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 2000000
             }
           },
           {
@@ -52,7 +52,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 9871000000
+              "duration": 3594000000
             }
           },
           {
@@ -62,7 +62,8 @@
               "location": "support/init.js:7"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -88,7 +89,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 389000000
+              "duration": 301000000
             }
           },
           {
@@ -100,7 +101,8 @@
               "location": "node_modules/apickli/apickli-gherkin.js:167"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]
@@ -171,7 +173,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 397000000
+              "duration": 232000000
             }
           },
           {
@@ -181,7 +183,8 @@
               "location": "support/init.js:7"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -194,7 +197,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 576000000
+              "duration": 280000000
             }
           },
           {
@@ -203,11 +206,11 @@
             "line": 7,
             "name": "the title is \"Google\"",
             "match": {
-              "location": "step-definitions/steps.js:11"
+              "location": "step-definitions/steps.js:12"
             },
             "result": {
               "status": "passed",
-              "duration": 13000000
+              "duration": 15000000
             }
           },
           {
@@ -216,11 +219,11 @@
             "line": 8,
             "name": "the Google search form exists",
             "match": {
-              "location": "step-definitions/steps.js:15"
+              "location": "step-definitions/steps.js:16"
             },
             "result": {
               "status": "passed",
-              "duration": 69000000
+              "duration": 57000000
             }
           }
         ]
@@ -276,8 +279,7 @@
               "location": "node_modules/apickli/apickli-gherkin.js:29"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -288,7 +290,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 327000000
+              "duration": 188000000
             }
           },
           {
@@ -311,7 +313,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4718000000
+              "duration": 3109000000
             }
           },
           {
@@ -324,7 +326,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 533000000
+              "duration": 527000000
             }
           }
         ]
