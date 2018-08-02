@@ -25,13 +25,13 @@ module.exports = {
         server_path: seleniumServer.path,
         log_path: '',
         // host: '127.0.0.1',
-        port: 4444
+        // port: 4444
     },
     "test_settings" : {
         "default" : {
           "launch_url" : "http://google.com",
           // "selenium_host"  : "localhost",
-          "selenium_port"  : 4444,
+          // "selenium_port"  : 4444,
           "silent": true,
           "screenshots" : {
             "enabled" : true,
