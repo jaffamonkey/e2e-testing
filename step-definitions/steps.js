@@ -4,7 +4,8 @@ const shared = client.page.shared();
 
   Given(/^I open Google's search page$/, () => {
     return client
-      .url('http://google.com')
+      // launch_url used from nightwatch-cucumber.conf.js
+      .url(client.launch_url)
       .waitForElementVisible('body', 10000);
   });
 
@@ -13,12 +14,11 @@ const shared = client.page.shared();
   });
 
   Then(/^the Google search form exists$/, () => {
+    // @googleSearchField value retrieved from elements section in the shared.js file
     return shared.assert.visible('@googleSearchField');
   });
 
   Then(/^I click on the logout button$/, () => {
-    // Debug breakpoint
-    // debugger;
     return shared
         .click('@Logout')
         .assert.containsText('#flash','You logged out of the secure area!')

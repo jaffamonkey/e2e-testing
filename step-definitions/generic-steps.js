@@ -9,36 +9,36 @@ const shared = client.page.shared();
       // .assert.urlContains(locpath);
   });
 
-  When('there is {string} occurences of element {string}', function (string, string2) {
+  When('there is {string} occurences of element {string}', function (elementCount, elementName) {
     // Write code here that turns the phrase above into concrete actions
-    return client.assert.elementCount(string2, string)
+    return client.assert.elementCount(elementName, elementCount)
   });
 
-  Then('I click the link text {string}', function (string) {
+  Then('I click the link text {string}', function (linkText) {
     return shared
-        .clickLinkByPureText(string).then(function (){
+        .clickLinkByPureText(linkText).then(function (){
           return client
             .waitForElementVisible('h1', 3000)
       })
   });
 
-  Then('I click on the button {string}', function (string) {
+  Then('I click on the button {string}', function (buttonId) {
     return client
-        .click(string).then(function (){
+        .click(buttonId).then(function (){
           return client
             .waitForElementNotVisible('h1', 3000)
             .waitForElementVisible('h1', 3000)
       })
   });
 
-  Then('I click on the radio {string}', function (string) {
+  Then('I click on the radio {string}', function (radioId) {
     return client
-        .click(string)
+        .click(radioId)
   });
 
-  Then('I click on the checkbox {string}', function (string) {
+  Then('I click on the checkbox {string}', function (checkboxId) {
     return client
-        .clickCheckboxIfUnselected(string)
+        .clickCheckboxIfUnselected(checkboxId)
   });
 
   Then('I upload the file {string} to field {string}', function (filepath, uploadfield) {
@@ -107,7 +107,6 @@ const shared = client.page.shared();
       .setValue(fieldName, text + 'last text in a long string');
   });
 
-
   Then('the element {string} is not empty', function (string) {
     return client
       .waitForElementVisible(string, 1000);
@@ -118,37 +117,13 @@ const shared = client.page.shared();
       .waitForElementVisible(string, 1000);
   });
 
-  When('I click on authority selection if available', function () {
+  When('I click on radio selection if available', function () {
     return shared
-    .chooseAuthorityIfOptionPresent('input[name="par_data_authority_id"]', '//div[text()="City Enforcement Squad"]')
-  });
-
-  When('I click on new organisation option if available', function () {
-    return shared
-      .chooseNewOrganisationOptionIfPresent('neworg','#edit-par-data-organisation-id-new')
-  });
-
-  When('I click new person if suggestions displayed', function () {
-    return shared
-      .chooseNewPersonIfOptionPresent('newperson','#edit-par-data-person-id-new') 
-   });
-
-   When('the {string} email confirmations for {string} are processed', function (emailSubject, user) {
-    return shared
-        .checkEmails(emailSubject, user)
-  });
-
-  When('only messages of type {string} are displayed', function (messageType) {
-    return shared.checkMessageTypeDisplay(messageType);
+    .clickRadioIfOptionPresent('input[name="a_radio_button"]', 'A Radio Button')
   });
 
   When('I run tota11y against the current page', function () {
     return shared
       .runTota11yAgainstCurrentPage()
   });
-  
-  When('I go to partnership detail page for my partnership {string} with status {string}', function (orgname, status) {
-    return shared
-    .goToPartnershipDetailPage(orgname,status)
-   }); 
    

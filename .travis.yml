@@ -28,6 +28,5 @@ script:
   - npm install
   - appium-doctor --ios
   - appium &
-  # - ios-webkit-debug-proxy -f http://www.bbc.co.uk &
   - sleep 20
-  - npm run nightwatch-cucumber-travis-ios -- --tag iostest
+  - npm run nightwatch-cucumber-travis

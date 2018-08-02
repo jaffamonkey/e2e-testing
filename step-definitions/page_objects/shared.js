@@ -44,6 +44,17 @@ module.exports = {
                       };
                     });
             });
+        },
+        clickRadioIfOptionPresent: function(elem, toClick){ 
+            return this.api.element('css selector', elem , function (result) {
+                if (result.value.ELEMENT) {
+                    return this  
+                    .clickLinkByPureText(toClick)   
+                }
+                else{ 
+                    return this
+                    }
+              })  
         }
     }]
 }

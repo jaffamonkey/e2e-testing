@@ -15,9 +15,7 @@ $ npm install
 To run:
 
 ```
-$ node_modules/.bin/nightwatch -c ./nightwatch-cucumber.conf.js -e firefox
-$ node_modules/.bin/nightwatch -c ./nightwatch-cucumber.conf.js
-$ node_modules/.bin/nightwatch -c ./nightwatch-cucumber.conf.js -e chrome-firefox
+$ node_modules/.bin/nightwatch -c ./nightwatch-cucumber.conf.js -e chrome-headless
 ```
 
 To run tests in parallel:
