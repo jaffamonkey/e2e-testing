@@ -5,29 +5,24 @@
   "devDependencies": {},
   "scripts": {
     "e2e-debug": "node --inspect node_modules/nightwatch/bin/nightwatch",
-    "selenium-install": "node_modules/.bin/selenium-standalone install",
-    "selenium": "node_modules/.bin/selenium-standalone start",
-    "nightwatch-cucumber-chrome": "node_modules/.bin/nightwatch -c ./nightwatch-cucumber.conf.js -e default",
+    "nightwatch-cucumber-travis-ios": "node_modules/.bin/nightwatch -c ./nightwatch-cucumber-travis-ios.conf.js -e default",
     "nightwatch-cucumber-travis": "node_modules/.bin/nightwatch -c ./nightwatch-cucumber-travis.conf.js -e default",
-    "nightwatch-cucumber-parallel": "node_modules/.bin/nightwatch -c ./nightwatch-cucumber-parallel.conf.js",
-    "nightwatch-cucumber-firefox": "node_modules/.bin/nightwatch -c ./nightwatch-cucumber.conf.js -e firefox",
     "nightwatch-cucumber-ios": "node_modules/.bin/nightwatch -c ./nightwatch-cucumber-ios.conf.js -e default",
-    "nightwatch-cucumber-chrome-firefox": "node_modules/.bin/nightwatch -c ./nightwatch-cucumber.conf.js -e chrome,firefox",
+    "travis-ios": "node_modules/.bin/nightwatch -c ./nightwatch-ios.conf.js -e ios",
     "generate-report": "node generate-report.js"
   },
   "dependencies": {
     "apickli": "latest",
+    "appium-xcuitest-driver": "2.80.0",
     "chromedriver": "2.37.0",
-    "cucumber": "4.2.1",
+    "cucumber": "4.0.0",
     "cucumber-html-reporter": "4.0.2",
     "cucumber-pretty": "1.4.1",
     "electron": "1.8.6",
-    "faker": "4.1.0",
     "geckodriver": "1.11.0",
     "minimist": "1.2.0",
     "nightwatch": "0.9.20",
     "nightwatch-cucumber": "9.1.2",
-    "selenium-server": "3.7.1",
-    "selenium-standalone": "6.13.0"
+    "selenium-server": "3.8.1"
   }
 }
