@@ -27,42 +27,56 @@ module.exports = {
         // host: '127.0.0.1',
         // port: 4444
     },
-    "test_settings" : {
-        "default" : {
-          "launch_url" : "http://google.com",
-          // "selenium_host"  : "localhost",
-          // "selenium_port"  : 4444,
-          "silent": true,
-          "screenshots" : {
-            "enabled" : true,
-            "path" : "reports/screenshots",
-            "on_failure": true,
-            "on_error": true
+    test_settings: {
+      default: {
+          launch_url: 'http://127.0.0.1:80',
+          selenium_port: 4444,
+          // selenium_host: 'localhost',
+          screenshots : {
+              enabled : true,
+              on_failure : true,
+              path: 'reports/screenshots'
           },
-          "desiredCapabilities": {
-            "browserName": "chrome",
-            "javascriptEnabled": true,
-            "acceptSslCerts": true
+          desiredCapabilities: {
+              browserName: 'chrome',
+              chromeOptions : {
+                  binary: '/usr/bin/google-chrome',
+                  args: ['--headless', '--no-sandbox', '--disable-gpu', '--window-size=1280,1280'],
+              },
+              javascriptEnabled: true,
+              acceptSslCerts: true
+          },
+          selenium: {
+              cli_args: {
+                  'webdriver.chrome.driver': chromedriver.path
+              }
+          }
+      },
+      firefox: {
+          desiredCapabilities: {
+              browserName: 'firefox',
+              javascriptEnabled: true,
+              acceptSslCerts: true
+          }
+      },
+    
+      ios: {
+          desiredCapabilities : {
+              browserName : 'Safari',
+              platformName : 'iOS',
+              platformVersion : '11.2',
+              deviceName : 'iPad Air 2',
+              noReset: true
           }
         },
     
-        "ios" : {
-          "desiredCapabilities" : {
-          "browserName" : "Safari",
-          "platformName" : "iOS",
-          "platformVersion" : "11.2",
-          "deviceName" : "iPad Air 2",
-          "noReset": true
-          }
-        },
-    
-        "chrome-headless" : {
-          "desiredCapabilities": {
-            "browserName": "chrome",
-            "javascriptEnabled": true,
-            "acceptSslCerts": true,
-            "chromeOptions" : {
-              "args" : ["headless", "no-sandbox", "disable-gpu"]
+       headless: {
+          desiredCapabilities: {
+            browserName: 'chrome',
+            javascriptEnabled: true,
+            acceptSslCerts: true,
+            chromeOptions : {
+              args : ['headless, no-sandbox, disable-gpu']
             }
           }
         }
