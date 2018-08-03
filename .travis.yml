@@ -1,14 +1,25 @@
 language: node_js
+
 node_js:
   - '7'
+  
 addons:
+  firefox: latest
   apt:
+    sources:
+     - google-chrome
     packages:
-      - xvfb
+     - google-chrome-stable
+
 before_script:
-  - export DISPLAY=':99.0'
-  - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+  - "export DISPLAY=:1337"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3
+  
+install:
+  - npm install
+  - npm run selenium-install
+  - sleep 10
   
 script:
-  - npm install
   - npm run nightwatch-cucumber-travis
