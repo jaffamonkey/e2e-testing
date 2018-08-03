@@ -18,7 +18,6 @@ before_script:
   
 install:
   - npm install
-  - npm run selenium-install
   - sleep 10
   
 script:
