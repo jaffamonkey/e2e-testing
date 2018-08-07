@@ -12,22 +12,22 @@ $ npm install
 
 ### Step 23
 
-To run:
+To run (and generate html report):
 
 ```
-$ node_modules/.bin/nightwatch -c ./nightwatch-cucumber.conf.js -e chrome-headless
+$ node_modules/.bin/nightwatch -c ./conf/nightwatch-cucumber.conf.js -e default && node generate-report.js
 ```
 
-To run tests in parallel:
+To run tests in parallel (and generate html report):
 
 ```
-$ node_modules/.bin/nightwatch -c ./nightwatch-cucumber-parallel.conf.js
+$ node_modules/.bin/nightwatch -c ./conf/nightwatch-cucumber-parallel.conf.js && node generate-report.js
 ```
 
 To run by tag
 
 ```
-$ node_modules/.bin/nightwatch -c ./nightwatch-cucumber-parallel.conf.js -- --tag tagname
+$ node_modules/.bin/nightwatch -c ./conf/nightwatch-cucumber-parallel.conf.js -- --tag tagname
 ```
 
 

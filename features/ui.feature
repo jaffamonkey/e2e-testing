@@ -1,4 +1,4 @@
-Feature: UI Test
+Feature: UI Tests
 
   @google
   Scenario: Searching Google
