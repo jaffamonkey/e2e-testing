@@ -1,3 +1,4 @@
+// Global settings for Nightwatch
 module.exports = {
 
     // this will overwrite the default polling interval (currently 500ms) for waitFor commands

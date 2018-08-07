@@ -27,6 +27,7 @@ module.exports = {
                 browser.setValue(input1, text);
           });
         },
+        // e2e login
         loggedInAs:function(string){ 
             return this
                 .clickLinkByPureText('Log in')
@@ -36,6 +37,7 @@ module.exports = {
                 .waitForElementVisible('#footer', 15000)
                 .assert.containsText('body', 'Log out')
         },
+        // Click checbox is not previously checked
         clickCheckboxIfUnselected: function(string) {
             return this.element('id', string, (response) => {
                     this.elementIdSelected(response.value.ELEMENT, (result) => {
@@ -45,6 +47,7 @@ module.exports = {
                     });
             });
         },
+        // Click radio option is not previously selected
         clickRadioIfOptionPresent: function(elem, toClick){ 
             return this.api.element('css selector', elem , function (result) {
                 if (result.value.ELEMENT) {

@@ -1,4 +1,5 @@
-// assert.elementCount('element', 1)
+// Usage: assert.elementCount('element', 1)
+// Extends the assert library with custom assertions
 exports.assertion = function (selector, count) {
     var countEl = parseInt(count, 10);
     this.message = 'Testing if element <' + selector + '> has count: ' + countEl;
