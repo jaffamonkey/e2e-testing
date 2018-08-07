@@ -1,5 +1,4 @@
-@search @ci @iostest
-Feature: Google Search tagged
+Feature: UI Test
 
   @google
   Scenario: Searching Google
@@ -7,3 +6,7 @@ Feature: Google Search tagged
     Then the title is "Google"
     And the Google search form exists
 
+  @login
+  Scenario: Checking login
+    Given I am logged in as valid user
+    And I log out of website
