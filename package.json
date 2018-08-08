@@ -1,6 +1,6 @@
 {
-  "name": "nightwatch-cucumberjs4",
-  "version": "0.9",
+  "name": "e2e-testing",
+  "version": "0.1.0",
   "description": "End-to-End Testing with Nightwatch and Cucumber",
   "devDependencies": {},
   "scripts": {
