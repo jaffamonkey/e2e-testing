@@ -5,8 +5,6 @@ const shared = client.page.shared();
   Given(/^I open the path "([^"]*)"$/, (locpath) => {
     return client
       .url(client.launch_url+locpath)
-      .waitForElementVisible('.button', 10000)
-      // .assert.urlContains(locpath);
   });
 
   When('there is {string} occurences of element {string}', function (elementCount, elementName) {
@@ -14,13 +12,20 @@ const shared = client.page.shared();
     return client.assert.elementCount(elementName, elementCount)
   });
 
-  Then('I click the link text {string}', function (linkText) {
-    return shared
-        .clickLinkByPureText(linkText).then(function (){
-          return client
-            .waitForElementVisible('h1', 3000)
-      })
-  });
+    // Using page object clickLinkByPureText
+    Then(/^I click the link text "([^"]*)"$/, (linkText) => {
+      return shared
+          .clickLinkByPureText(linkText)
+    });
+  
+    Then(/^the title is "([^"]*)"$/, (title) => {
+      return client.assert.title(title);
+    });
+  
+    Then(/^the Google search form exists$/, () => {
+      // @googleSearchField value retrieved from elements section in the shared.js file
+      return shared.assert.visible('@googleSearchField');
+    });
 
   Then('I click on the button {string}', function (buttonId) {
     return client
@@ -37,8 +42,7 @@ const shared = client.page.shared();
   });
 
   Then('I click on the checkbox {string}', function (checkboxId) {
-    return client
-        .clickCheckboxIfUnselected(checkboxId)
+    return client.clickCheckboxIfUnselected(checkboxId)
   });
 
   Then('I upload the file {string} to field {string}', function (filepath, uploadfield) {
@@ -87,13 +91,11 @@ const shared = client.page.shared();
   });
 
   Given('I am logged in as {string}', function (string) {
-    return shared
-      .loggedInAs(string)
+    return shared.loggedInAs(string)
   });
 
   Then('I clear the inputfield {string}', function (elem) {
-    return client
-      .clearValue(elem)
+    return client.clearValue(elem)
   });
 
   Then('I add {string} random chars of text to field {string}', function (numChars, fieldName) {

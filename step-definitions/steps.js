@@ -9,15 +9,7 @@ const shared = client.page.shared();
       .waitForElementVisible('body', 10000);
   });
 
-  Then(/^the title is "([^"]*)"$/, (title) => {
-    return client.assert.title(title);
-  });
-
-  Then(/^the Google search form exists$/, () => {
-    // @googleSearchField value retrieved from elements section in the shared.js file
-    return shared.assert.visible('@googleSearchField');
-  });
-
+  // Put subsequent checks in for every action
   Then(/^I click on the logout button$/, () => {
     return shared
         .click('@Logout')
@@ -29,15 +21,6 @@ const shared = client.page.shared();
         .clickLinkByText('Log out')
         .waitForElementVisible('i.fa-sign-in', 3000)
         .assert.containsText('#flash','You logged out of the secure area!')
-  });
-
-  Then(/^I click the link text "([^"]*)"$/, (linkText) => {
-    return shared
-        .clickLinkByPureText(linkText)
-  });
-
-  Then(/^I click on the link "([^"]*)" containing text "([^"]*)"$/, (linkClass, linkText) => {
-    return client.click(linkClass)
   });
 
   Then(/^I am logged in as valid user$/, () => {
