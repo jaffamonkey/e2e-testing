@@ -30,42 +30,42 @@ module.exports = {
     appium: {
         start_process: false
     },
-    "test_settings" : {
-        "default" : {
-          "launch_url" : "http://google.com",
-          "selenium_host"  : "localhost",
-          "selenium_port"  : 4444,
-          "silent": true,
-          "screenshots" : {
-            "enabled" : true,
-            "path" : "reports/screenshots",
-            "on_failure": true,
-            "on_error": true
+    test_settings : {
+        default : {
+          launch_url : 'http://google.com',
+          selenium_host  : 'localhost',
+          selenium_port  : 4444,
+          silent: true,
+          screenshots : {
+            enabled : true,
+            path : 'reports/screenshots',
+            on_failure: true,
+            on_error: true
           },
-          "desiredCapabilities": {
-            "browserName": "chrome",
-            "javascriptEnabled": true,
-            "acceptSslCerts": true
+          desiredCapabilities: {
+            browserName: 'chrome',
+            javascriptEnabled: true,
+            acceptSslCerts: true
           }
         },
     
-        "ios" : {
-          "desiredCapabilities" : {
-          "browserName" : "Safari",
-          "platformName" : "iOS",
-          "platformVersion" : "11.2",
-          "deviceName" : "iPad Air 2",
-          "noReset": true
+        ios : {
+          desiredCapabilities : {
+          browserName : 'Safari',
+          platformName : 'iOS',
+          platformVersion : '11.2',
+          deviceName : 'iPad Air 2',
+          noReset: true
           }
         },
     
-        "chrome-headless" : {
-          "desiredCapabilities": {
-            "browserName": "chrome",
-            "javascriptEnabled": true,
-            "acceptSslCerts": true,
-            "chromeOptions" : {
-              "args" : ["headless", "no-sandbox", "disable-gpu"]
+        chromeheadless: {
+          desiredCapabilities: {
+            browserName: 'chrome',
+            javascriptEnabled: true,
+            acceptSslCerts: true,
+            chromeOptions : {
+              args : ['headless', 'no-sandbox', 'disable-gpu']
             }
           }
         }
