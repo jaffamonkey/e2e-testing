@@ -23,6 +23,11 @@ const shared = client.page.shared();
         .assert.containsText('#flash','You logged out of the secure area!')
   });
 
+  Then(/^I get the similarity between "([^"]*)" and "([^"]*)"$/, (expected, actual) => {
+    return shared
+        .checkSimilarity(expected, actual)
+  });
+
   Then(/^I am logged in as valid user$/, () => {
     return client
         .url('http://the-internet.herokuapp.com/login')

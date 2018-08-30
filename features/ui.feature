@@ -5,6 +5,7 @@ Feature: UI Tests
     Given I open Google's search page
     Then the title is "Google"
     And the Google search form exists
+    And I get the similarity between "heathen" and "header"
 
   @login
   Scenario: Checking login
