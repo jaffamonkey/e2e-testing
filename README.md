@@ -56,7 +56,6 @@ There are enough emulators that come with XCode package, but to install new ones
 * Now follow the dialog.
 
 To run:
-
 $ npm install -g appium
 $ appium
 [NEW CONSOLE TAB]
